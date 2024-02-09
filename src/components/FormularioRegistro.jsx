@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/FormularioRegistro.css";
+import "./styles/FormularioRegistro.css";
 
 export const FormularioRegistro = () => {
   // Estado para guardar los datos del formulario

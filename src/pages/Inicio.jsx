@@ -1,5 +1,4 @@
 import React from 'react'
-import {FormularioRegistro} from "../components/forms/FormularioRegistro.jsx"
 import './styles/Inicio.css'
 
 export const Inicio = () => {
@@ -7,7 +6,7 @@ export const Inicio = () => {
     <>  
     <h1>PAGINA DE INICIO</h1>
 
- <FormularioRegistro/>
+
 
     </>
   )
