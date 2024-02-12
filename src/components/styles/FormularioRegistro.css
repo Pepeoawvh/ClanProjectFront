@@ -1,5 +1,53 @@
-.F {
+
+.formRegItem {
+    display: grid;
+    border: solid 2px #f2508e;
+    border-radius: 3px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    text-shadow: 1px 1px 3px rgba(30, 30, 30, 0.572);
+    align-self: center;
+    align-items: center;
+    height: 50px;
+    width: 270px;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    padding: 10px;
+}
+
+
+.formRegBanner{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    background-color: #ef699c00;
+    width: 100vw;
+    height: 100vh;
+    align-self: center;
+    justify-self: center ;
+    grid-gap: 20px;
+}
+
+.formReg{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr ;
+    height: 400px;
+    grid-gap: 30px;
+    border: solid 4px #f2508e;
+    align-self: center;
+    padding: 40px;
+    border-radius: 15px;
+    position: relative;
+    z-index: 2; /* modifica el orden de apilamiento, puede sobreponer o trasponer elementos */
+
 }
+
+.regTitle{
+    color: white;
+    font-size: 50px;
+    position: relative;
+    z-index: 2; /* modifica el orden de apilamiento, puede sobreponer o trasponer elementos */
+    padding-top: 0px;
+
+  }

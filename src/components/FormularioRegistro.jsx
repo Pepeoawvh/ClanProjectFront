@@ -1,76 +1,66 @@
-import React, { useState } from "react";
-import "./styles/FormularioRegistro.css";
+import { useState } from "react"
+import "./styles/FormularioRegistro.css"
 
 export const FormularioRegistro = () => {
-  // Estado para guardar los datos del formulario
-  const [datos, setDatos] = useState({
-    nombre: "",
-    telefono: "",
-    correo: "",
-  });
-  // Creamos una función para manejar el cambio de los inputs
-  const handleChange = (event) => {
-    // Actualizamos el estado con el valor del input
-    setDatos({
-      ...datos,
-      [event.target.name]: event.target.value,
-    });
-  };
-  // Creamos una función, proceso asincrono, para manejar el envío del formulario
-  const handleSubmit = async (event) => {
-    // Evitamos el comportamiento por defecto del formulario
-    event.preventDefault();
-    // Intentar conectarse a la colección de bbdd, y agrega nuevo doc
 
-    //  bloque try catch
-    // try {
-    // await CONEXION
-    // alert("USUARIO GUARDADA")
-    // } catch (error){
-    // alert("No se pudo guardar la reserva")
-    // }
-  };
-
+  const initalRegisterData = {
+    nombreCompleto: '',
+    correo: '',
+    contrasena: ''
+  }
+ 
+  const [registerData, setRegisterData] = useState(initalRegisterData)
+ 
+  const onChange = (e) => {
+    setRegisterData({
+      ...registerData,
+      [e.target.name]: e.target.value
+    })
+  }
+ 
+ 
+  const onSubmit = (e) => {
+    e.preventDefault()
+    console.log(registerData)
+  }
+ 
   return (
-  <>
-
-  <div>Formulario Registro</div>
-    <div className="formContainer">
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="nombre">Nombre:</label>
-        <input
-          type="text"
-          id="nombre"
-          name="nombre"
-          value={datos.nombre}
-          onChange={handleChange}
-          placeholder="Ej: Juan Clanel"
-        />
-
-        <label htmlFor="telefono">Teléfono:</label>
-        <input
-          type="tel"
-          id="telefono"
-          name="telefono"
-          value={datos.telefono}
-          onChange={handleChange}
-          placeholder="Ej: 9 4321 5678"
-        />
-        <label htmlFor="correo">Correo:</label>
-        <input
-          type="email"
-          id="correo"
-          name="correo"
-          value={datos.correo}
-          onChange={handleChange}
-          placeholder="Ej: email@clanero.cl"
-        />
-
-        <button type="submit">Reservar</button>
-      </form>
+    <form className="formRegBanner" onSubmit={onSubmit}>
+      <div className='regTitle'>RegistroInicio</div>
 
 
-    </div>
-    </>
-  );
-};
+<div class="formReg">  
+ 
+      <input
+        className="formRegItem" 
+        type="text"
+        placeholder="Nombre Completo"
+        value={registerData.nombreCompleto}
+        name="nombreCompleto"
+        onChange={onChange}
+      /> {/**nombreCompleto */}
+ 
+      <input
+        className="formRegItem"
+        type="email"
+        placeholder="Email"
+        value={registerData.correo}
+        name="correo"
+        onChange={onChange}
+      /> {/**correo */}
+ 
+      <input
+        className="formRegItem"
+        type="password"
+        placeholder="Password"
+        value={registerData.contrasena}
+        name="contrasena"
+        onChange={onChange}
+      />{/**contraseña */}
+   
+      <button className="formRegItem" type="submit">Registrarse</button>
+      </div>
+    </form>
+  )
+}
+ 

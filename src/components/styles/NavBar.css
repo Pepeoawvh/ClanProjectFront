@@ -5,7 +5,7 @@ body, h1, h2, h3, p, ul {
   }
   
   header {
-    background-color: white;
+    background-color: #02031f;
     padding: 10px;
     margin-top: 40px;
     margin-bottom: 40px;
@@ -52,7 +52,7 @@ body, h1, h2, h3, p, ul {
   @media (max-width: 600px) {
   
     header {
-      background-color: white;
+      background-color: #02031f;
       padding: 10px;
       margin-top: 40px;
       margin-bottom: 40px;

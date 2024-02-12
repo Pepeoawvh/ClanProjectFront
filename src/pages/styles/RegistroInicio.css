@@ -1,0 +1,41 @@
+.regImgBackground{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    background-image: url(../../public/images/Registroa.jpeg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position:  top;
+    background-size: contain;
+    align-items: center;
+}
+
+.regBackground{
+    height: 100vh;
+    width: 100vw;
+    background-color: #02031d;
+}
+
+
+
+.circle {
+    border-radius: 50%;
+    display: grid;
+    position: relative;
+  }
+
+  .circle img {
+    border-radius: 50%;
+    border:1px solid rgba(255,255,255,0);
+  }
+
+  .circle:after {
+   content: "";
+   width: 100vw;
+   height: 100vh;
+   background: radial-gradient(ellipse at center, rgba(255,255,255,0) 0%,#02031d 69%, #02031d 100%);
+   border-radius: 50%;
+   position: absolute;
+   top: 0;
+   left: 0;
+  }

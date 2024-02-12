@@ -1,11 +1,15 @@
 import React from 'react'
 import { FormularioRegistro } from '../components/FormularioRegistro'
-
+import "./styles/RegistroInicio.css"
 export const RegistroInicio = () => {
   return (
-<>
-    <FormularioRegistro/>
-    <div>RegistroInicio</div>
+< >
+
+<div className="regBackground ">
+  <div className='regImgBackground circle'>
+  <FormularioRegistro/>
+      </div>
+</div>
 </>
   )
 }
