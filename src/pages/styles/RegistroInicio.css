@@ -4,6 +4,7 @@
     grid-template-columns: 1fr;
     background-image: url(../../public/images/Registroa.jpeg);
     height: 100vh;
+    width: 100vw;
     background-repeat: no-repeat;
     background-position:  top;
     background-size: contain;
@@ -14,7 +15,21 @@
     height: 100vh;
     width: 100vw;
     background-color: #02031d;
+    z-index: 2; /* modifica el orden de apilamiento, puede sobreponer o trasponer elementos */
+    opacity: 0;
+  animation: fade-in 1s forwards;
+  transition-delay: 1s;
 }
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 
 
 

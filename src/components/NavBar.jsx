@@ -10,11 +10,11 @@ export const Navbar = () => {
       <nav>
         <div className="logo">
           <Link to="/"> {/* El componente <Link /> es un componente que nos permite crear enlaces dentro de nuestra aplicación. */}
-            <img src="https://scontent.flsc3-1.fna.fbcdn.net/v/t39.30808-6/306197414_488161779984090_5270107914798332018_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeG4AXW88w77AoNQBXxAQN_N57PkeyCFESjns-R7IIURKBTtL71M9z5eu_3aEVSGQ2A&_nc_ohc=XKVAImD2YnwAX98V38L&_nc_ht=scontent.flsc3-1.fna&oh=00_AfC0mjps66C_BVKijuUH45ozQqcHy_k7XutTcE1-3yCVrg&oe=65A7801D" alt="logo" />
+            
           </Link>
         </div>
         <ul>
-          <li>
+          <li className='navIni'>
             <NavLink to="/">Inicio</NavLink> {/* El componente <NavLink /> es un componente que nos permite crear enlaces dentro de nuestra aplicación. */}{/* La diferencia entre <NavLink /> y <Link /> es que <NavLink /> nos permite agregar estilos a los enlaces cuando estos se encuentran activos. agregando la clase active. */}
           </li>
           <li>

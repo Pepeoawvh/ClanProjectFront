@@ -1,53 +1,102 @@
 
 .formRegItem {
     display: grid;
-    border: solid 2px #f2508e;
+    border: solid 2px #7316CC;
     border-radius: 3px;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 20px;
     text-shadow: 1px 1px 3px rgba(30, 30, 30, 0.572);
-    align-self: center;
+    align-self: top;
     align-items: center;
     height: 50px;
-    width: 270px;
-    background-color: rgba(0, 0, 0, 0);
+    width: 420px;
+    background-color: #f2508e1e;
     color: white;
     padding: 10px;
+    justify-self: center;
+}
+#botonRegistro{
+    background-color: #f2508e1e;;
+    letter-spacing: 1px;
+    font-family: Helvetica;
+    font-weight: 1000;
 }
 
+input:focus {
+  /* outline: none; */
+  outline: solid 2px #7316CC;
+}
 
 .formRegBanner{
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 0.1fr 1fr;
     justify-content: center;
-    background-color: #ef699c00;
+    justify-items: center;
+    background-color: #f4dfe700;
     width: 100vw;
     height: 100vh;
     align-self: center;
     justify-self: center ;
-    grid-gap: 20px;
+    grid-gap: 10px;
 }
 
 .formReg{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr ;
-    height: 400px;
-    grid-gap: 30px;
-    border: solid 4px #f2508e;
-    align-self: center;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr ;
+    height: 90%;
+    width: 500%;
+    /* width: 100%; */
+    border: solid 3px #7316CC;
+    align-self: top;
     padding: 40px;
     border-radius: 15px;
     position: relative;
     z-index: 2; /* modifica el orden de apilamiento, puede sobreponer o trasponer elementos */
-
+    opacity: 0;
+  animation: fade-in 2s forwards;
+  transition-delay: 2s;
+  background-color: rgba(1, 15, 27, 0.331);
 }
 
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
 .regTitle{
+    display: grid;
+    width: 100%;
+    grid-template-columns:1fr 1fr;
     color: white;
     font-size: 50px;
     position: relative;
     z-index: 2; /* modifica el orden de apilamiento, puede sobreponer o trasponer elementos */
     padding-top: 0px;
+    justify-items: center;
+    
 
   }
+
+  .titleText{
+    width: 100%;
+    display: grid;
+    align-self: flex-end;
+    justify-self: center;
+    font-size: 20px;
+    
+  }  
+  .titleText span {
+    justify-self: center;
+  }
+  
+  #registroTitle{
+    border-right: 2px solid rgba(255, 255, 255, 0.446);
+  }
+
+
