@@ -30,9 +30,6 @@
   }
 }
 
-
-
-
 .circle {
     border-radius: 50%;
     display: grid;
@@ -53,4 +50,29 @@
    position: absolute;
    top: 0;
    left: 0;
+  }
+
+  .formContainer{
+    display: grid;
+    width: 30vh;
+    grid-template-rows: 0.3fr 0.5fr;
+    color: white;
+    font-size: 50px;
+    position: relative;
+    z-index: 2; /* modifica el orden de apilamiento, puede sobreponer o trasponer elementos */
+    padding-top: 0px;
+    padding-bottom: 10px;
+    
+  }
+  .regTitle {
+    display: grid;
+text-align: center;
+font-size: 18px;
+align-self: flex-end;
+margin-bottom: 10px;
+}
+
+ button:hover {
+    color: #ff9900;
+    transition: 0.5s;
   }

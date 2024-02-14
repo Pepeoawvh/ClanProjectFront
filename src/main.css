@@ -1,3 +1,10 @@
+body{
+  background: #02031f;
+}
+
+
+
+
 @tailwind base;
 
 @layer base {
@@ -15,6 +22,3 @@
 @tailwind utilities;
 
 
-body{
-  background: #02031f;
-}

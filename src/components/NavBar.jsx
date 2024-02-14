@@ -24,10 +24,7 @@ export const Navbar = () => {
             <NavLink to="/PreguntasFrecuentes">Preguntas Frecuentes</NavLink> {/* En los Link y NavLink usamos el atributo 'to' para indicar a donde queremos que nos lleve el enlace, en este caso a la ruta '/productos'. */}
           </li>
           <li>
-            <NavLink to="/Equipo">Equipo</NavLink> {/* En los anchor tags de HTML '<a></a>' usamos el atributo 'href' para indicar a donde queremos que nos lleve el enlace, como vemos aquí no usamos el atributo 'href' sino el atributo 'to'. */}
-          </li>
-          <li>
-            <NavLink to="/RegistroInicio">Registro/Login</NavLink>
+            <NavLink to="/RegistroInicio">Registro/Inicio</NavLink>
           </li>
         </ul>
       </nav>

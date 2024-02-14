@@ -1,5 +1,5 @@
 
-.formRegItem {
+.formItem {
     display: grid;
     border: solid 2px #7316CC;
     border-radius: 3px;
@@ -27,9 +27,9 @@ input:focus {
   outline: solid 2px #7316CC;
 }
 
-.formRegBanner{
+.formBanner{
     display: grid;
-    grid-template-rows: 0.1fr 1fr;
+    grid-template-rows: 1fr;
     justify-content: center;
     justify-items: center;
     background-color: #f4dfe700;
@@ -44,12 +44,31 @@ input:focus {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr ;
-    height: 90%;
-    width: 500%;
-    /* width: 100%; */
+    height: fit-content;
+    width: 100%;
     border: solid 3px #7316CC;
     align-self: top;
     padding: 40px;
+    border-radius: 15px;
+    grid-gap: 15px;
+    position: relative;
+    z-index: 2; /* modifica el orden de apilamiento, puede sobreponer o trasponer elementos */
+    opacity: 0;
+  animation: fade-in 2s forwards;
+  transition-delay: 2s;
+  background-color: rgba(1, 15, 27, 0.331);
+}
+.formLogIn{
+    display: grid;
+    
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr ;
+    height: fit-content;
+    width: 100%;
+    border: solid 3px #7316CC;
+    align-self: top;
+    padding: 40px;
+    grid-gap: 15px;
     border-radius: 15px;
     position: relative;
     z-index: 2; /* modifica el orden de apilamiento, puede sobreponer o trasponer elementos */
@@ -68,35 +87,9 @@ input:focus {
   }
 }
 
+.formButton{
+  background-color: rgba(215, 7, 194, 0.242) !important;
+}
 
-.regTitle{
-    display: grid;
-    width: 100%;
-    grid-template-columns:1fr 1fr;
-    color: white;
-    font-size: 50px;
-    position: relative;
-    z-index: 2; /* modifica el orden de apilamiento, puede sobreponer o trasponer elementos */
-    padding-top: 0px;
-    justify-items: center;
-    
 
-  }
-
-  .titleText{
-    width: 100%;
-    display: grid;
-    align-self: flex-end;
-    justify-self: center;
-    font-size: 20px;
-    
-  }  
-  .titleText span {
-    justify-self: center;
-  }
   
-  #registroTitle{
-    border-right: 2px solid rgba(255, 255, 255, 0.446);
-  }
-
-

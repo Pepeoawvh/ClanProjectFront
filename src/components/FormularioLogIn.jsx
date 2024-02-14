@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./styles/Formularios.css";
 
-export const FormularioRegistro = () => {
+export const FormularioLogIn = () => {
 
 
   const initalRegisterData = {
@@ -27,15 +27,9 @@ export const FormularioRegistro = () => {
   return (
     <form className="formBanner" onSubmit={onSubmit}>
 
-      <div className="formReg" id="formReg">
-        <input
-          className="formItem"
-          type="text"
-          placeholder="Nombre Completo"
-          value={registerData.nombreCompleto}
-          name="nombreCompleto"
-          onChange={onChange}
-        />{" "}
+
+      <div className="formLogIn" id="formReg">
+        
         {/**nombreCompleto */}
         <input
           className="formItem"
@@ -53,17 +47,10 @@ export const FormularioRegistro = () => {
           value={registerData.contrasena}
           name="contrasena"
           onChange={onChange}
-        /> <input
-          className="formItem"
-          type="password"
-          placeholder="Confirma Password"
-          value={registerData.contrasena}
-          name="contrasena"
-          onChange={onChange}
-        />
+        /> 
         {/**contraseña */}
-        <button className="formItem formButton" id="botonRegistro" type="submit">
-          Registrarse
+        <button className="formItem formButton" id="botonLogIn" type="submit">
+          Iniciar Sesion
         </button>
       </div>
       
