@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./styles/Formularios.css";
+import axios from "axios";
 
 export const FormularioRegistro = () => {
 
@@ -19,9 +20,14 @@ export const FormularioRegistro = () => {
     });
   };
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
     console.log(registerData);
+    console.log(import.meta.env.VITE_BACKENDURL)
+const url = `${import.meta.env.VITE_BACKENDURL}/users/register`
+const data = await axios.post(url,registerData)
+console.log(data)
+
   };
 
   return (
