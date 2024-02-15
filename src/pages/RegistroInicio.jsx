@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+  import React, { useState } from "react";
 import { FormularioRegistro } from "../components/FormularioRegistro";
 import { FormularioLogIn } from "../components/FormularioLogIn";
 import "./styles/RegistroInicio.css";

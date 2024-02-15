@@ -1,25 +1,26 @@
-
 .formItem {
-    display: grid;
-    border: solid 2px #7316CC;
-    border-radius: 3px;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 20px;
-    text-shadow: 1px 1px 3px rgba(30, 30, 30, 0.572);
-    align-self: top;
-    align-items: center;
-    height: 50px;
-    width: 420px;
-    background-color: #f2508e1e;
-    color: white;
-    padding: 10px;
-    justify-self: center;
+  display: grid;
+  border: solid 2px #7316CC;
+  border-radius: 3px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  text-shadow: 1px 1px 3px rgba(30, 30, 30, 0.572);
+  align-self: top;
+  align-items: center;
+  height: 50px;
+  width: 420px;
+  background-color: #f2508e1e;
+  color: white;
+  padding: 10px;
+  justify-self: center;
 }
-#botonRegistro{
-    background-color: #f2508e1e;;
-    letter-spacing: 1px;
-    font-family: Helvetica;
-    font-weight: 1000;
+
+#botonRegistro {
+  background-color: #f2508e1e;
+  ;
+  letter-spacing: 1px;
+  font-family: Helvetica;
+  font-weight: 1000;
 }
 
 input:focus {
@@ -27,52 +28,55 @@ input:focus {
   outline: solid 2px #7316CC;
 }
 
-.formBanner{
-    display: grid;
-    grid-template-rows: 1fr;
-    justify-content: center;
-    justify-items: center;
-    background-color: #f4dfe700;
-    width: 100vw;
-    height: 100vh;
-    align-self: center;
-    justify-self: center ;
-    grid-gap: 10px;
+.formBanner {
+  display: grid;
+  grid-template-rows: 1fr;
+  justify-content: center;
+  justify-items: center;
+  background-color: #f4dfe700;
+  width: 100vw;
+  height: 100vh;
+  align-self: center;
+  justify-self: center;
+  grid-gap: 10px;
 }
 
-.formReg{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr ;
-    height: fit-content;
-    width: 100%;
-    border: solid 3px #7316CC;
-    align-self: top;
-    padding: 40px;
-    border-radius: 15px;
-    grid-gap: 15px;
-    position: relative;
-    z-index: 2; /* modifica el orden de apilamiento, puede sobreponer o trasponer elementos */
-    opacity: 0;
+.formReg {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  height: fit-content;
+  width: 100%;
+  border: solid 3px #7316CC;
+  align-self: top;
+  padding: 40px;
+  border-radius: 15px;
+  grid-gap: 15px;
+  position: relative;
+  z-index: 2;
+  /* modifica el orden de apilamiento, puede sobreponer o trasponer elementos */
+  opacity: 0;
   animation: fade-in 2s forwards;
   transition-delay: 2s;
   background-color: rgba(1, 15, 27, 0.331);
 }
-.formLogIn{
-    display: grid;
-    
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr ;
-    height: fit-content;
-    width: 100%;
-    border: solid 3px #7316CC;
-    align-self: top;
-    padding: 40px;
-    grid-gap: 15px;
-    border-radius: 15px;
-    position: relative;
-    z-index: 2; /* modifica el orden de apilamiento, puede sobreponer o trasponer elementos */
-    opacity: 0;
+
+.formLogIn {
+  display: grid;
+
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: fit-content;
+  width: 100%;
+  border: solid 3px #7316CC;
+  align-self: top;
+  padding: 40px;
+  grid-gap: 15px;
+  border-radius: 15px;
+  position: relative;
+  z-index: 2;
+  /* modifica el orden de apilamiento, puede sobreponer o trasponer elementos */
+  opacity: 0;
   animation: fade-in 2s forwards;
   transition-delay: 2s;
   background-color: rgba(1, 15, 27, 0.331);
@@ -82,14 +86,12 @@ input:focus {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
 
-.formButton{
+.formButton {
   background-color: rgba(215, 7, 194, 0.242) !important;
 }
-
-
-  

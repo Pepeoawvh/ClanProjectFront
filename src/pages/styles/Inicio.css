@@ -1,0 +1,105 @@
+.iniContainer {
+    display: grid;
+    width: 100vw;
+    grid-template-rows: 1fr 1fr;
+    position: absolute;
+    justify-content: center;
+    grid-gap: 30px;
+}
+
+.iniTitle {
+    display: grid;
+    grid-template-rows: 1fr 0.3fr 0.3fr;
+    text-align: center;
+    animation: fade-in 4s forwards;
+    transition-delay: 4s;
+}
+
+.iniTitle span {
+    position: inherit;
+    color: white;
+    z-index: 4;
+}
+
+.iniTitleName {
+    font-size: 90px;
+    font-weight: 700;
+    letter-spacing: -1px;
+
+}
+
+.iniSubTitle {
+    font-size: 50px;
+}
+
+.iniImgBackground {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    background-image: url(../../public/images/bgini.jpeg);
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: -2 !important;
+}
+
+.iniBackground {
+    height: 100vh;
+    width: 100vw;
+    background-color: #02031d;
+    animation: fade-in 1s forwards;
+    transition-delay: 1s;
+    position: absolute;
+    top: 2cm;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+}
+
+.iniDarkLeft {
+    height: 100vh;
+    width: 50vw;
+    background-color: rgba(1, 1, 6, 0.256);
+    opacity: 0;
+    animation: fade-in 1s forwards;
+    transition-delay: 1s;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+.iniAction{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80vw;
+    color: white;
+    justify-items: center;
+    animation: fade-in 1s forwards;
+    transition-delay: 1s;
+
+}
+
+.iniActions{
+    display: grid;
+    grid-template-rows: 0.4fr 0.3fr;
+    justify-items: center;
+
+}
+
+.iniActions button{
+width: 271.91px ;
+height: fit-content ;
+padding: 15px;
+border-radius: 100px;
+background-color: #7316CC;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.476);
+}
+.iniActions span{
+    font-size: 20px;
+
+}
