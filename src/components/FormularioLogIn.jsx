@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./styles/Formularios.css";
 import axios from "axios";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 export const FormularioLogIn = () => {
   const initialUserData = {
@@ -9,6 +11,8 @@ export const FormularioLogIn = () => {
   };
 
   const [userData, setUserData] = useState(initialUserData);
+  const [isLoading, setIsLoading] = useState(false);
+  const navegar = useNavigate();
 
   const onChange = (e) => {
     setUserData({
@@ -19,13 +23,24 @@ export const FormularioLogIn = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
     console.log(userData);
     console.log(import.meta.env.VITE_BACKENDURL);
     const url = `${import.meta.env.VITE_BACKENDURL}/users/login`;
-    const {data} = await axios.post(url, userData);
-    console.log(data);
+    try {
+      const { data } = await axios.post(url, userData);
+      console.log(data);
+      setIsLoading(false);
+      setUserData(initialUserData);
+      toast("Inicio de sesion exitoso");
+      navegar('/')
+    } catch (error) {
+      toast.error(error.response.data.mensaje)
+      console.log(error.response);
+      setIsLoading(false);
+      setUserData(initialUserData);
+    }
   };
-
 
   return (
     <form className="formBanner" onSubmit={onSubmit}>
@@ -49,8 +64,10 @@ export const FormularioLogIn = () => {
           onChange={onChange}
         />
         {/**contraseña */}
-        <button className="formItem formButton" id="botonLogIn" type="submit">
-          Iniciar Sesion
+        <button className="formItem formButton" id="botonLogIn" type="submit" disabled={isLoading}>
+          {
+            isLoading ? "Cargando..." : "Iniciar Sesion" // renderizado condicional
+          }
         </button>
       </div>
     </form>
