@@ -1,59 +1,58 @@
 import { useState } from "react";
 import "./styles/Formularios.css";
+import axios from "axios";
 
 export const FormularioLogIn = () => {
-
-
-  const initalRegisterData = {
-    nombreCompleto: "",
-    correo: "",
-    contrasena: "",
+  const initialUserData = {
+    email: "",
+    password: "",
   };
 
-  const [registerData, setRegisterData] = useState(initalRegisterData);
+  const [userData, setUserData] = useState(initialUserData);
 
   const onChange = (e) => {
-    setRegisterData({
-      ...registerData,
+    setUserData({
+      ...userData,
       [e.target.name]: e.target.value,
     });
   };
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    console.log(registerData);
+    console.log(userData);
+    console.log(import.meta.env.VITE_BACKENDURL);
+    const url = `${import.meta.env.VITE_BACKENDURL}/users/login`;
+    const {data} = await axios.post(url, userData);
+    console.log(data);
   };
+
 
   return (
     <form className="formBanner" onSubmit={onSubmit}>
-
-
       <div className="formLogIn" id="formReg">
-        
         {/**nombreCompleto */}
         <input
           className="formItem"
           type="email"
           placeholder="Email"
-          value={registerData.correo}
-          name="correo"
+          value={userData.email}
+          name="email"
           onChange={onChange}
         />{" "}
-        {/**correo */}
+        {/**email */}
         <input
           className="formItem"
           type="password"
           placeholder="Password"
-          value={registerData.contrasena}
-          name="contrasena"
+          value={userData.password}
+          name="password"
           onChange={onChange}
-        /> 
+        />
         {/**contraseña */}
         <button className="formItem formButton" id="botonLogIn" type="submit">
           Iniciar Sesion
         </button>
       </div>
-      
     </form>
   );
 };
