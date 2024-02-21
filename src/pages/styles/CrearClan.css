@@ -1,12 +1,109 @@
-/* crearClanContainer
-crearClanNav
-crearClanNavGallery
-buttonUp
-crearClanServicios
-buttonDown
-crearClanMain
-crearClanCounter
-counterButton
-counter
-counterButton
-crearClanTexts */
+.crearClanMain{
+    display: grid;
+    grid-template-rows: 0.1fr 0.2fr 0.2fr 0.2fr 0.2fr;
+    justify-items: center;
+
+}
+.crearClanContainer{
+    display: grid;
+    grid-template-columns: 0.3fr 1fr;
+    margin: 50px;
+    color: white;
+}
+.crearClanNav{
+    display: grid;
+    grid-template-rows: 0.2fr 1fr;
+    align-content: center;
+    border: solid 4px white;
+    border-radius: 20px;
+    grid-gap: 20px;
+    padding: 10px;
+}
+.crearClanNav span{
+    display: grid;
+text-align: center;
+justify-self: center;
+width: fit-content;
+}
+
+.crearClanNavGallery{
+    display: grid;
+    grid-template-rows: 0.4fr 1fr;
+    grid-gap: 30px;
+}
+.buttonUp{
+    display: grid;
+    height: 70px;
+    width: 70px;
+    background-color: aliceblue;
+    justify-self: center;
+}
+.crearClanServicios{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    grid-gap: 15px;
+    width: max-content;
+    justify-self: center;
+}
+.servicio{
+    height: 80px;
+    width: 80px;
+    background-color: aquamarine;
+}
+.buttonDown{
+    display: grid;
+    height: 60px;
+    width: 60px;
+    background-color: aliceblue;
+    justify-self: center;
+}
+
+.crearClanCounter{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 50%;
+}
+.counterButton{
+    font-size:70px;
+}
+.counter{
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    border: solid white 10px;
+    padding: 30px;
+    border-radius: 180px;
+    height: 100px;
+    width: 100px;
+    align-content: center;
+}
+#contador{
+    font-size: 30px;
+}
+
+.crearClanTexts {
+    display: grid;
+    width: 60vw;
+    grid-template-rows: 0.2fr 0.5fr;
+    justify-items: center;
+    margin-top: 30px;
+    border-bottom: solid white 5px;
+    
+}
+#ganancia{
+    display: grid;
+    background-color: #3817CC;
+    align-content: center;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.titles{ 
+    display: grid;
+    align-self: center;
+    font-size: 40px;
+
+}
+.crearClanButtonContainer{}
+.crearClan{}
+.crearClan{}
