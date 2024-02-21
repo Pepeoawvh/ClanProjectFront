@@ -1,16 +1,18 @@
-.crearClanMain{
+.crearClanMain {
     display: grid;
-    grid-template-rows: 0.1fr 0.2fr 0.2fr 0.2fr 0.2fr;
+    grid-template-rows: 0.1fr 0.2fr 0.2fr 0.1fr 0.2fr;
     justify-items: center;
 
 }
-.crearClanContainer{
+
+.crearClanContainer {
     display: grid;
     grid-template-columns: 0.3fr 1fr;
     margin: 50px;
     color: white;
 }
-.crearClanNav{
+
+.crearClanNav {
     display: grid;
     grid-template-rows: 0.2fr 1fr;
     align-content: center;
@@ -19,26 +21,31 @@
     grid-gap: 20px;
     padding: 10px;
 }
-.crearClanNav span{
+
+.crearClanNav span {
     display: grid;
-text-align: center;
-justify-self: center;
-width: fit-content;
+    text-align: center;
+    justify-self: center;
+    width: fit-content;
 }
 
-.crearClanNavGallery{
+.crearClanNavGallery {
     display: grid;
     grid-template-rows: 0.4fr 1fr;
     grid-gap: 30px;
 }
-.buttonUp{
+
+.buttonUp {
     display: grid;
     height: 70px;
     width: 70px;
-    background-color: aliceblue;
+    background-image: url(../../public/images/upButtonCrearClan.png);
     justify-self: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
-.crearClanServicios{
+
+.crearClanServicios {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
@@ -46,28 +53,38 @@ width: fit-content;
     width: max-content;
     justify-self: center;
 }
-.servicio{
+
+.servicio {
     height: 80px;
     width: 80px;
     background-color: aquamarine;
 }
-.buttonDown{
-    display: grid;
-    height: 60px;
-    width: 60px;
-    background-color: aliceblue;
-    justify-self: center;
-}
 
-.crearClanCounter{
+.buttonDown {
+    display: grid;
+    height: 70px;
+    width: 70px;
+    background-image: url(../../public/images/downButtonCrearClan.png);
+    justify-self: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#counterTitle{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.crearClanCounter {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     width: 50%;
 }
-.counterButton{
-    font-size:70px;
+
+.counterButton {
+    font-size: 70px;
 }
-.counter{
+
+.counter {
     display: grid;
     align-self: center;
     justify-self: center;
@@ -78,7 +95,8 @@ width: fit-content;
     width: 100px;
     align-content: center;
 }
-#contador{
+
+#contador {
     font-size: 30px;
 }
 
@@ -89,21 +107,84 @@ width: fit-content;
     justify-items: center;
     margin-top: 30px;
     border-bottom: solid white 5px;
-    
+    padding-bottom: 50px;
+
 }
-#ganancia{
+#cupos{
+    display: grid;
+    background-color: white;
+    color: #3817CC;
+    border-radius: 8px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+#ganancia {
     display: grid;
     background-color: #3817CC;
     align-content: center;
     padding-right: 10px;
     padding-left: 10px;
+    border-radius: 8px;
+    margin-top: 20px;
 }
-.titles{ 
+
+.titles {
     display: grid;
     align-self: center;
     font-size: 40px;
+    padding-top: 40px;
 
 }
-.crearClanButtonContainer{}
-.crearClan{}
-.crearClan{}
+
+.crearClanButtonContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5vw;
+   margin-top: 30px;
+}
+
+.crearClan{
+display: grid;
+grid-template-rows: 1fr 1fr;
+justify-items: center;
+justify-content: center;
+}
+
+.crearClan button{
+    display: grid;
+    background-color: #7316CC;
+    justify-self: center;
+    align-self: center;
+    padding: 20px;
+    border-radius: 50px;
+}
+
+.crearClan span{
+    margin-top: 25px;
+}
+.clanImgBackground {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    background-image: url(../../public/images/crearClan.jpg);
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: -2 !important;
+}
+
+.clanBackground {
+    height: 100%;
+    width: 100%;
+    background-color: #02031d;
+    animation: fade-in 1s forwards;
+    transition-delay: 1s;
+    position: absolute;
+    top: 2cm;
+    left: 3.5cm;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+}

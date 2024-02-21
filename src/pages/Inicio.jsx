@@ -1,3 +1,4 @@
+import { NavLink, Link } from "react-router-dom"; // Importamos los componentes <NavLink /> y <Link /> desde la carpeta node_modules
 import React from "react";
 import "./styles/Inicio.css";
 
@@ -15,13 +16,12 @@ export const Inicio = () => {
         </div>
         <div class="iniAction">
           <div class="iniActions">
- 
-            <button>Quiero unirme a una Subscripcion</button>{" "}
-            <span> Unete a un clan y ahorra!</span>{" "}
+          <NavLink to="/CrearClan"><button>Unirme a una Subscripcion</button></NavLink>
+            <span> Unete a un clan y ahorra!</span>
           </div>
           <div class="iniActions">
-            <button>Compartir mi subscripcion</button>{" "}
-            <span> Crea un clan y ahorra!</span>{" "}
+            <a href=""><button>Compartir mi subscripcion</button></a>
+            <span> Crea un clan y ahorra!</span>
           </div>
         </div>
       </div>

@@ -5,15 +5,13 @@ export const Navbar = () => {
   return (
     <header>
       <nav>
-        <a href="/">
-          
+      
             <NavLink to="/">
             <div className="logo"></div>
               {" "}
               {/* El componente <Link /> es un componente que nos permite crear enlaces dentro de nuestra aplicación. */}
             </NavLink>
-          
-        </a>
+
         <ul>
 
           <li>
