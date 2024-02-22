@@ -1,15 +1,15 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "./styles/Formularios.css";
-import axios from "axios";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { usersContext } from "../context/users/usersContext";
 
 export const FormularioLogIn = () => {
   const initialUserData = {
     email: "",
     password: "",
   };
-
+const {logIn} = useContext(usersContext)
   const [userData, setUserData] = useState(initialUserData);
   const [isLoading, setIsLoading] = useState(false);
   const navegar = useNavigate();
@@ -24,12 +24,8 @@ export const FormularioLogIn = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    console.log(userData);
-    console.log(import.meta.env.VITE_BACKENDURL);
-    const url = `${import.meta.env.VITE_BACKENDURL}/users/login`;
     try {
-      const { data } = await axios.post(url, userData);
-      console.log(data);
+      logIn(userData)
       setIsLoading(false);
       setUserData(initialUserData);
       toast("Inicio de sesion exitoso");

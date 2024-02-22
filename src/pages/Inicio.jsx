@@ -5,7 +5,7 @@ import "./styles/Inicio.css";
 export const Inicio = () => {
   return (
     <>
-      <div class="iniContainer">
+      <div className="iniContainer">
         <div className="iniTitle">
           <span className="iniTitleName"> CLAN </span>
           <span className="iniSubTitle"> CUENTAS COMPARTIDAS </span>
@@ -14,12 +14,12 @@ export const Inicio = () => {
             servicios!
           </span>
         </div>
-        <div class="iniAction">
-          <div class="iniActions">
+        <div className="iniAction">
+          <div className="iniActions">
           <NavLink to="/CrearClan"><button>Unirme a una Subscripcion</button></NavLink>
             <span> Unete a un clan y ahorra!</span>
           </div>
-          <div class="iniActions">
+          <div className="iniActions">
             <a href=""><button>Compartir mi subscripcion</button></a>
             <span> Crea un clan y ahorra!</span>
           </div>

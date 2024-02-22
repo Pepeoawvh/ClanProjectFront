@@ -2,6 +2,8 @@
     display: grid;
     grid-template-rows: 0.1fr 0.2fr 0.2fr 0.1fr 0.2fr;
     justify-items: center;
+    animation: fade-in 1s forwards;
+    transition-delay: 1s;
 
 }
 
@@ -69,11 +71,13 @@
     background-repeat: no-repeat;
     background-size: contain;
 }
-#counterTitle{
+
+#counterTitle {
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 20px;
 }
+
 .crearClanCounter {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -110,7 +114,8 @@
     padding-bottom: 50px;
 
 }
-#cupos{
+
+#cupos {
     display: grid;
     background-color: white;
     color: #3817CC;
@@ -118,6 +123,7 @@
     padding-right: 10px;
     padding-left: 10px;
 }
+
 #ganancia {
     display: grid;
     background-color: #3817CC;
@@ -133,6 +139,7 @@
     align-self: center;
     font-size: 40px;
     padding-top: 40px;
+    color: white;
 
 }
 
@@ -140,17 +147,17 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 5vw;
-   margin-top: 30px;
+    margin-top: 30px;
 }
 
-.crearClan{
-display: grid;
-grid-template-rows: 1fr 1fr;
-justify-items: center;
-justify-content: center;
+.crearClan {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    justify-content: center;
 }
 
-.crearClan button{
+.crearClan button {
     display: grid;
     background-color: #7316CC;
     justify-self: center;
@@ -159,9 +166,10 @@ justify-content: center;
     border-radius: 50px;
 }
 
-.crearClan span{
+.crearClan span {
     margin-top: 25px;
 }
+
 .clanImgBackground {
     display: grid;
     grid-template-rows: 1fr 1fr;
@@ -187,4 +195,78 @@ justify-content: center;
     right: 0;
     bottom: 0;
     z-index: -2;
+}
+
+.crearClanSpotiContainer {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    justify-items: center;
+}
+
+.crearClanSpotiBox {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 60vw;
+    height: max-content;
+    border: solid #c1a4fc 4px;
+    border-radius: 15px;
+    padding: 30px;
+    grid-gap: 50px;
+}
+
+.dosColumnas {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+
+}
+
+.inputCrearClan {
+    display: grid;
+    border-radius: 5px;
+    height: 100%;
+    width: 90%;
+    padding-left: 5px;
+}
+
+.boxDown {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    grid-gap: 30px;
+}
+
+.boxDown input {
+    display: grid;
+    width: 80%;
+    justify-self: right;
+    border-radius: 5px;
+    padding-left: 5px;
+
+}
+
+.send {
+    display: grid;
+    background-color: #AF16CC;
+    padding: 10px;
+    border-radius: 50px;
+    width: 50%;
+    justify-self: left !important;
+
+
+}
+
+.crearClanSpotiBox button {
+    display: grid;
+    color: white;
+    background-color: #AF16CC;
+    width: 30%;
+    border-radius: 50px;
+    align-items: center;
+    justify-self: center;
+
+
 }

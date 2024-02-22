@@ -1,17 +1,24 @@
 import React, { useState } from "react";
+import { useContext } from "react";
+import { usersContext } from "../context/users/usersContext";
+import { useNavigate } from "react-router-dom";
+
 import "./styles/Formularios.css";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 export const FormularioRegistro = () => {
 
-
-  const initalRegisterData = {
+  const initialRegisterData = {
     nombreCompleto: "",
     correo: "",
     contrasena: "",
   };
+  const {register} = useContext(usersContext);
+  const [registerData, setRegisterData] = useState(initialRegisterData);
+  const [isLoading, setIsLoading] = useState(false);
+  const navegar = useNavigate();
 
-  const [registerData, setRegisterData] = useState(initalRegisterData);
 
   const onChange = (e) => {
     setRegisterData({
@@ -22,12 +29,18 @@ export const FormularioRegistro = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    console.log(registerData);
-    console.log(import.meta.env.VITE_BACKENDURL)
-const url = `${import.meta.env.VITE_BACKENDURL}/users/register`
-const data = await axios.post(url,registerData)
-console.log(data)
-
+    setIsLoading(true);
+    try {
+     await register(registerData)
+      setIsLoading(false);
+      setRegisterData(initialRegisterData);
+      toast("Registro exitoso, Bienvenido!");
+      navegar('/')
+    } catch (error) {
+      console.log(error);
+      setIsLoading(false);
+      setRegisterData(initialRegisterData);
+    }
   };
 
   return (
@@ -68,8 +81,10 @@ console.log(data)
           onChange={onChange}
         />
         {/**contraseña */}
-        <button className="formItem formButton" id="botonRegistro" type="submit">
-          Registrarse
+        <button className="formItem formButton" id="botonRegistro" type="submit" disabled={isLoading}>
+        {
+            isLoading ? "Cargando..." : "Registrarse" // renderizado condicional
+          }
         </button>
       </div>
       
