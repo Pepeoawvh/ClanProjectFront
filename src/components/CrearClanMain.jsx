@@ -1,8 +1,18 @@
-
+import React, { useContext, useEffect } from "react";
 import { useCounter } from "../hooks/useCounter.js";
-export const CrearClanMain = () => {
+import { clanesContext } from "../context/clanes/clanesContext.js";
 
- const { count, increment, decrement } = useCounter(0);
+
+
+export const CrearClanMain = () => {
+  const {obtenerServicio, isServiceSelected, nombreServicio, cuposServicio, valorServicio} = useContext (clanesContext)
+useEffect (() => {
+obtenerServicio ()
+reset ()
+
+}, [isServiceSelected]) 
+
+ const { count, increment, decrement, reset} = useCounter(0, cuposServicio);
   return (
     <>
     <div className="crearClanMain">
@@ -21,9 +31,9 @@ export const CrearClanMain = () => {
     </div>
     <div className="crearClanTexts">
       <span id="cupos">
-        %Plataforma% lo pueden utilizar hasta %NCupos%
+        {nombreServicio} lo pueden utilizar hasta {cuposServicio}
       </span>
-      <span id="ganancia">Gana por mes: %Ganancia% por cada cupo</span>
+      <span id="ganancia">Gana por mes: {(valorServicio/cuposServicio)*0.9} por cada cupo</span>
     </div>
     <span className="titles">¿Quieres publicar tu Clan?</span>
     <div className="crearClanButtonContainer">

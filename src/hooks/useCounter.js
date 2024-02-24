@@ -1,11 +1,11 @@
 import { useState } from 'react';
 
-export function useCounter(initialValue) {
+export function useCounter(initialValue, cuposMaximos) {
   const [count, setCount] = useState(initialValue);
 
   function increment() {
     const newCount = count + 1;
-    if (newCount > 5) {
+    if (newCount > cuposMaximos) {
       return;
     }
     setCount(newCount);
@@ -19,5 +19,9 @@ export function useCounter(initialValue) {
     setCount(newCount);
   }
 
-  return { count, increment, decrement };
+  function reset () {
+     setCount(initialValue)
+  }
+
+  return { count, increment, decrement, reset };
 }
