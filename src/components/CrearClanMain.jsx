@@ -42,7 +42,7 @@ reset ()
         <span> Otros usuarios podrán ver tu clan </span>
       </div>
       <div className="crearClan">
-        <button>Clan Privado</button>
+        <button>Clan Privado</button> {/* dar funcionalidad a este boton */}
         <span>¡Envia un link privado a tus amigos! </span>
       </div>
     </div>

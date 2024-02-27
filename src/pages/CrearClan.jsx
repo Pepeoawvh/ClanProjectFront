@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { CrearClanMain } from "../components/CrearClanMain";
 import { CrearClanNav } from "../components/CrearClanNav";
 import { CrearClanSpotify } from "../components/CrearClanSpotify";
+import { UnirseClanBoxes } from "../components/UnirseClanBoxes";
 import "./styles/CrearClan.css";
 import { clanesContext } from "../context/clanes/clanesContext";
 
@@ -24,6 +25,8 @@ export const CrearClan = () => {
       </div>
 
       <CrearClanSpotify/>
+<UnirseClanBoxes/>
+
     </>
   );
 };
