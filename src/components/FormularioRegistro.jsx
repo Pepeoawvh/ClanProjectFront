@@ -35,7 +35,7 @@ export const FormularioRegistro = () => {
       setIsLoading(false);
       setRegisterData(initialRegisterData);
       toast("Registro exitoso, Bienvenido!");
-      navegar('/')
+      navegar("/")
     } catch (error) {
       console.log(error);
       setIsLoading(false);

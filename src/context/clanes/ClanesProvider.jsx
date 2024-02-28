@@ -10,7 +10,8 @@ export const ClanesProvider = ({ children }) => {
         selectedService: null, 
         cupos:0,
         valor:null,
-        nombreServicio: ""
+        nombreServicio: "",
+        tipoDeClan:null,
     }
 
     const [state, dispatch] = useReducer(clanesReducer, initialClanesState)
@@ -33,11 +34,21 @@ export const ClanesProvider = ({ children }) => {
     } 
 
 
+    const selectedClan = (tipoDeClan) => {
+        console.log (tipoDeClan)
+        dispatch({            
+            type: "SELECTCLANTYPE",
+            payload: tipoDeClan,
+        })
+    }
+
+
     return (
         <clanesContext.Provider 
             value={{
                 selectServiceId,
                 obtenerServicio,
+                selectedClan,
                 isServiceSelected: state.selectedService,
                 nombreServicio: state.nombreServicio,
                 cuposServicio: state.cupos,

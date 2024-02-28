@@ -10,7 +10,7 @@ export const ServicioCuentaIMG = ({nombreCuenta,imagenUrl,_id}) => {
 return(
     <div className="servicio" onClick={selectService}>
         <img src={imagenUrl}/>
-        {nombreCuenta}
+   
         
     </div>
 

@@ -1,15 +1,26 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { CrearClanMain } from "../components/CrearClanMain";
 import { CrearClanNav } from "../components/CrearClanNav";
-import { CrearClanSpotify } from "../components/CrearClanSpotify";
+import { CrearClanInput } from "../components/CrearClanInput";
 import { UnirseClanBoxes } from "../components/UnirseClanBoxes";
 import "./styles/CrearClan.css";
 import { clanesContext } from "../context/clanes/clanesContext";
+import { usersContext } from "../context/users/usersContext";
+import { useNavigate } from "react-router-dom";
 
 export const CrearClan = () => {
-
+  const {isAuth} = useContext (usersContext)
   const {isServiceSelected} = useContext (clanesContext)
+  const navegar = useNavigate ()
   console.log(isServiceSelected)
+  useEffect (() => {
+    if (!isAuth){
+      console.log("saliendo")
+      navegar ("/RegistroInicio")
+      
+    }
+
+  }, [isAuth])
 
   return (
     <>
@@ -24,7 +35,7 @@ export const CrearClan = () => {
         <div className="clanImgBackground circle"></div>
       </div>
 
-      <CrearClanSpotify/>
+      <CrearClanInput/>
 <UnirseClanBoxes/>
 
     </>

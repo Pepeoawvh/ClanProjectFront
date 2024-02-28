@@ -1,6 +1,6 @@
 import "../pages/styles/CrearClan.css";
 
-export const CrearClanSpotify = () => {
+export const CrearClanInput = () => {
   return (
     <>
       <div className="crearClanSpotiContainer">

@@ -16,11 +16,11 @@ export const Inicio = () => {
         </div>
         <div className="iniAction">
           <div className="iniActions">
-          <NavLink to="/CrearClan"><button>Unirme a una Subscripcion</button></NavLink>
+          <NavLink to=""><button>Unirme a una Suscripcion</button></NavLink>
             <span> Unete a un clan y ahorra!</span>
           </div>
           <div className="iniActions">
-            <a href=""><button>Compartir mi subscripcion</button></a>
+          <NavLink to="/CrearClan"><button>Compartir mi Suscripcion</button></NavLink>
             <span> Crea un clan y ahorra!</span>
           </div>
         </div>

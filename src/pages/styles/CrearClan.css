@@ -175,6 +175,23 @@ border-radius: 50%;
     border-radius: 50px;
 }
 
+next {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    justify-content: center;
+}
+
+
+.next button {
+    display: grid;
+    background-color: #3a0070;
+    justify-self: center;
+    align-self: center;
+    padding: 20px;
+    border-radius: 50px;
+}
+
 .crearClan span {
     margin-top: 25px;
 }
