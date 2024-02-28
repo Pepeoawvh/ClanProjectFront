@@ -25,14 +25,13 @@ const {logIn} = useContext(usersContext)
     e.preventDefault();
     setIsLoading(true);
     try {
-      logIn(userData)
+      await logIn(userData)
       setIsLoading(false);
       setUserData(initialUserData);
       toast("Inicio de sesion exitoso");
       navegar('/')
     } catch (error) {
-      toast.error(error.response.data.mensaje)
-      console.log(error.response);
+      toast.error(error.message)
       setIsLoading(false);
       setUserData(initialUserData);
     }
