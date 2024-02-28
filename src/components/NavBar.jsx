@@ -10,7 +10,7 @@ export const Navbar = () => {
     <header>
       <nav>
         <NavLink to="/">
-          <div className="logo"></div>{" "}
+         <div className="logo"></div>{" "} 
           {/* El componente <Link /> es un componente que nos permite crear enlaces dentro de nuestra aplicación. */}
         </NavLink>
 

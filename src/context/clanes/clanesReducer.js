@@ -4,7 +4,12 @@ export const clanesReducer = (state, action) => {
             return {...state, selectedService: action.payload}
         case "ESTABLECERSERVICIO":
             return {...state, cupos: action.payload.numUsuarios, valor: action.payload.precio, nombreServicio: action.payload.nombreCuenta}
-        default: 
-            return {...state}
+        case "SELECTCLANTYPE":
+            return {...state, tipoDeClan: action.payload}
+        
+
+
+            default: 
+            return {...state}        
     }
 }

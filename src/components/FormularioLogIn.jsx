@@ -29,7 +29,7 @@ const {logIn} = useContext(usersContext)
       setIsLoading(false);
       setUserData(initialUserData);
       toast("Inicio de sesion exitoso");
-      navegar('/')
+      navegar("/")
     } catch (error) {
       toast.error(error.response.data.mensaje)
       console.log(error.response);
