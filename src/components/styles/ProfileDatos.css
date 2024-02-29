@@ -1,7 +1,6 @@
 .ProfileDatos{
     color: white;
     padding: 10px;
-    margin: 10px;
     border: 1px solid;
     border-radius: 5px;
     display: flex;
@@ -17,11 +16,16 @@ margin-top: 20px;
 }
 
 .containerProfile{
+
     color: white;
     display: flex;
     flex-direction: column;
     padding: 15px;
+    margin-top: -5px;
     margin-left: 25px;
+  
 }
+
+
 
 

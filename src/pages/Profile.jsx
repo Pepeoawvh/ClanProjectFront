@@ -11,13 +11,13 @@ export const Profile = () => {
   return (
     <>
      <div className='botonProfile'>
-      <button onClick={()=>{setProfileSelected ('datos')}}>Mis Datos</button>
+      <button  className onClick={()=>{setProfileSelected ('datos')}}>Mis Datos</button>
       <button onClick={()=>{setProfileSelected ('clanes')}}>Mis Clanes </button>
       <button onClick={()=>{setProfileSelected('suscripciones')}}>Mis Suscripciones</button>
      </div>
       {
         (profileSelected==='datos')? <ProfileDatos/>:
-        (profileSelected==='clanes')?<MisClanesProfile/>:
+        (profileSelected==='clanes')? <MisClanesProfile/>:
           <MisSuscripcionesProfile/>
       }
     

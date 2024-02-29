@@ -1,0 +1,30 @@
+.botonProfile {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .botonProfile button {
+    background-color: #7316CC;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .botonProfile button:hover {
+    background-color: #7316CC;
+  }
+  
+  .botonProfile button:focus {
+    outline: none;
+    box-shadow: 0 0 3px 1px #3817CC;
+  }

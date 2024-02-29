@@ -11,6 +11,7 @@ export const MisSuscripcionesProfile = () => {
         <li>
         <h3>Hola! {user.username}</h3>
         </li>
+       
        {
         user.miembrode.map((clan)=>(
           <p key={clan._id}>{clan._id}</p> 
