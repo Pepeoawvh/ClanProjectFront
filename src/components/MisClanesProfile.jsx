@@ -1,10 +1,12 @@
 import React, { useContext } from 'react'
 import { usersContext } from '../context/users/usersContext'
 import './styles/MisclanesProfile.css'
+import { ClanesAdministrados } from './ClanesAdministrados'
 
 
 export const MisClanesProfile = () => {
 const {user} = useContext (usersContext)
+
   return (
     <>
     <div className='ClanesProfile'>
@@ -14,7 +16,7 @@ const {user} = useContext (usersContext)
         </li>
        {
         user.administradorde.map((clan)=>(
-          <p key={clan._id}>{clan._id}</p> 
+          <ClanesAdministrados key={clan._id} id={clan._id}/>
         ))
        }
       </ul>
