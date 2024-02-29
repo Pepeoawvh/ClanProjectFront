@@ -21,7 +21,7 @@
 .clanDisponibleBox{
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 0.5fr;
+  grid-template-rows: 1fr 0.5fr 0.5fr;
   height: fit-content;
   width: 100%;
   background-color: #7416cc79;
@@ -44,21 +44,15 @@
   justify-items: center;
 }
 
-.clanDisponibleBoxImg{
-  width: 55px;
-  height: 55px;
-  border-radius: 15px;
-  grid-row: span 2;
-  align-self: center;
-}
 .clanBoxTitleText{
   font-size: 22px;
 }
 .clanDisponibleBoxMiddle{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  height: 55px;
+  grid-template-columns: 1fr;
   justify-self: center;
-  grid-gap: 40px;
+  justify-content: center;
 
 }
 .buttonClanBox{
@@ -71,6 +65,19 @@
   border-radius: 60px;
   align-items: center;
   
+}
+.clanDisponibleBoxImg{
+  display: grid;
+  grid-row: span 2;
+  width: 55px;
+  height: 55px;
+  align-self: center;
+  border: solid white 1px;
+  border-radius: 15px;
+}
+.clanBoxCupos{
+  display: grid;
+  justify-self: center;
 }
 
 @media screen and (max-width: 768px) {

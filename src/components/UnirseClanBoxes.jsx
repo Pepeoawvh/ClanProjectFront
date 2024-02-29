@@ -33,7 +33,6 @@ export const UnirseClanBoxes = () => {
           <span> %tiempo% activo / %Verificado%</span>
         </div>
         <div className="clanDisponibleBoxMiddle">
-          <div className="clanBoxPlataformasIMG"></div>
           <button className="buttonClanBox">UNIRME</button>
         </div>
         <div className="clanBoxCupos">{cuposServicio} Cupos Disponibles</div>
