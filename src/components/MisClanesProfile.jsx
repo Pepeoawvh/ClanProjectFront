@@ -14,6 +14,7 @@ const {user} = useContext (usersContext)
         <li>
         <h3>Hola! {user.username}</h3>
         </li>
+       
        {
         user.administradorde.map((clan)=>(
           <ClanesAdministrados key={clan._id} id={clan._id}/>

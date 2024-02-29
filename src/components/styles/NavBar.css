@@ -30,7 +30,7 @@ nav {
   margin-left: 50px;
 }
 
-ul {
+nav ul {
   display: grid;
   width: 70vw;
   grid-template-columns: 1.3fr 1.3fr 1.3fr 2fr;
