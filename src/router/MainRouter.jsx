@@ -1,6 +1,7 @@
 import {Routes, Route} from 'react-router-dom'
 import { Inicio } from '../pages/Inicio'
 import { QueSonLosClanes } from '../pages/QueSonLosClanes'
+import { QuienesSomos } from '../pages/QuienesSomos'
 import { PreguntasFrecuentes } from '../pages/PreguntasFrecuentes'
 import { RegistroInicio } from '../pages/RegistroInicio'
 import { CrearClan } from '../pages/CrearClan'
@@ -13,6 +14,7 @@ export const MainRouter = () => {
             <Route exact path="/" element={<Inicio/>}/>
             <Route exact path="/QueSonLosClanes" element={<QueSonLosClanes/>}/>
             <Route exact path="/PreguntasFrecuentes" element={<PreguntasFrecuentes/>}/>
+            <Route exact path="/QuienesSomos" element={<QuienesSomos/>}/>
             <Route exact path="/RegistroInicio" element={<RegistroInicio/>}/>
             <Route exact path="/CrearClan" element={<CrearClan/>}/>
             <Route path="*" element= {<error404/>}/>

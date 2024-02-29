@@ -146,9 +146,19 @@ border-radius: 50%;
 .titles {
     display: grid;
     align-self: center;
-    font-size: 40px;
-    padding-top: 40px;
+    font-size: 35px;
     color: white;
+    margin-top: 10px;
+}
+
+.subTitles {
+    display: grid;
+    align-self: center;
+    font-size: 20px;
+    font-style: italic;   
+    color: white;
+    font-weight: 100;
+    margin-bottom: 10px;
 
 }
 
@@ -156,7 +166,7 @@ border-radius: 50%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 5vw;
-    margin-top: 30px;
+ 
 }
 
 .crearClan {
@@ -175,21 +185,22 @@ border-radius: 50%;
     border-radius: 50px;
 }
 
-next {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    justify-items: center;
-    justify-content: center;
-}
 
+.next{
+padding-left: 750px;
+
+}
 
 .next button {
     display: grid;
-    background-color: #3a0070;
-    justify-self: center;
-    align-self: center;
+    background-color: #5e00b5;
+    justify-self: right;
+    align-self: right;
     padding: 20px;
-    border-radius: 50px;
+    width: 190%;
+    border-radius: 30px;
+    align-content: right;
+
 }
 
 .crearClan span {
@@ -225,16 +236,15 @@ next {
 
 .crearClanSpotiContainer {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    height: 100vh;
     width: 100vw;
     justify-content: center;
     justify-items: center;
+    margin-bottom: 300px;
 }
 
 .crearClanSpotiBox {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     width: 60vw;
     height: max-content;
     border: solid #c1a4fc 4px;
@@ -254,9 +264,14 @@ next {
 .inputCrearClan {
     display: grid;
     border-radius: 5px;
-    height: 100%;
-    width: 90%;
+    height: 80%;
+    width: 120%;
     padding-left: 5px;
+}
+
+.inputTittles{
+color: white;
+
 }
 
 .boxDown {
@@ -295,4 +310,10 @@ next {
     justify-self: center;
 
 
+}
+
+
+.isSelected{
+background-color: #460353!important;
+    
 }

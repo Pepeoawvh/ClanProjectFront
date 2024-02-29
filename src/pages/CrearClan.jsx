@@ -1,8 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { CrearClanMain } from "../components/CrearClanMain";
 import { CrearClanNav } from "../components/CrearClanNav";
-import { CrearClanInput } from "../components/CrearClanInput";
-import { UnirseClanBoxes } from "../components/UnirseClanBoxes";
+
 import "./styles/CrearClan.css";
 import { clanesContext } from "../context/clanes/clanesContext";
 import { usersContext } from "../context/users/usersContext";
@@ -35,8 +34,7 @@ export const CrearClan = () => {
         <div className="clanImgBackground circle"></div>
       </div>
 
-      <CrearClanInput/>
-<UnirseClanBoxes/>
+      
 
     </>
   );
