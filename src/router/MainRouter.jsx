@@ -4,6 +4,7 @@ import { QueSonLosClanes } from '../pages/QueSonLosClanes'
 import { PreguntasFrecuentes } from '../pages/PreguntasFrecuentes'
 import { RegistroInicio } from '../pages/RegistroInicio'
 import { CrearClan } from '../pages/CrearClan'
+import { Profile } from '../pages/Profile'
 /* aqui irian paginas y rutas dinamicas y estaticas */
 
 export const MainRouter = () => {
@@ -15,6 +16,7 @@ export const MainRouter = () => {
             <Route exact path="/PreguntasFrecuentes" element={<PreguntasFrecuentes/>}/>
             <Route exact path="/RegistroInicio" element={<RegistroInicio/>}/>
             <Route exact path="/CrearClan" element={<CrearClan/>}/>
+            <Route exact path="/Profile" element={<Profile/>}/>
             <Route path="*" element= {<error404/>}/>
             {/* crear una ruta dinamica para usuarios por id o por correo */}
         </Routes>
