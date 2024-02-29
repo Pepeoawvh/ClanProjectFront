@@ -54,7 +54,24 @@ const logOut = () => {
       payload: user,
     });
   };
-
+   
+  const updateUser = async (updateData) =>{
+    const url = `${import.meta.env.VITE_BACKENDURL}/users/edit/${state.user._id}`
+    const {data} = await axios.patch (url, updateData, {
+      headers: {
+        "authorization": `Token ${JSON.parse (localStorage.getItem("userToken"))}` 
+        
+      }
+    })
+    localStorage.setItem("userToken", JSON.stringify(data.data));
+    console.log(data);
+    const user = jwtDecode(data.data);
+    console.log(user);
+    dispatch({
+      type: "LOGIN/REGISTER",
+      payload: user,
+    });
+  }
 
 
   return (
@@ -63,6 +80,7 @@ const logOut = () => {
       logIn,
       logOut,
       register,
+      updateUser,
       isAuth: state.isAuthenticated,
       user: state.user,
     }}>

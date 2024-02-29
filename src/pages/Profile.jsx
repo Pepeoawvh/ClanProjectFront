@@ -10,19 +10,27 @@ export const Profile = () => {
   
   return (
     <>
+     <div className='profileMainContainer'>
      <div className='botonProfile'>
       <button  className onClick={()=>{setProfileSelected ('datos')}}>Mis Datos</button>
       <button onClick={()=>{setProfileSelected ('clanes')}}>Mis Clanes </button>
       <button onClick={()=>{setProfileSelected('suscripciones')}}>Mis Suscripciones</button>
      </div>
+     
+    
+  
+  
       {
         (profileSelected==='datos')? <ProfileDatos/>:
         (profileSelected==='clanes')? <MisClanesProfile/>:
           <MisSuscripcionesProfile/>
       }
-    
-    
-    
+      </div>
+      
+      <div className="profileBackground">
+        <div className="profileImgBackground circle"></div>
+      </div>
+        
 
     </>
   )
