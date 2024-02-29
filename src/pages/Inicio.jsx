@@ -16,7 +16,7 @@ export const Inicio = () => {
         </div>
         <div className="iniAction">
           <div className="iniActions">
-          <NavLink to=""><button>Unirme a una Suscripcion</button></NavLink>
+          <NavLink to="/UnirseClan"><button>Unirme a una Suscripcion</button></NavLink>
             <span> Unete a un clan y ahorra!</span>
           </div>
           <div className="iniActions">

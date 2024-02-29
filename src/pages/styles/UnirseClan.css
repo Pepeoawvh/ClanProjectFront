@@ -1,0 +1,16 @@
+.UnirseClanContainer {
+    display: grid;
+    grid-template-columns: 0.3fr 1fr;
+    margin: 40px;
+    color: white;
+    grid-gap: 30px;
+    height: fit-content;
+    
+}
+
+.unirseClanTitle {
+    grid-column: span 2;
+    height: 50px;
+    text-align: center;
+    font-size: 25px;
+  }
