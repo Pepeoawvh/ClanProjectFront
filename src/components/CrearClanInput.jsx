@@ -7,7 +7,7 @@ export const CrearClanInput = () => {
       <div className="crearClanSpotiContainer">
         <div className="titles">Agrega tus credenciales!</div>
         <div className="subTitles">
-          Tu información se maneja de forma segura y encriptada para tu seguridad🔐
+          Tu información se maneja de forma encriptada para tu seguridad🔐
         </div>
         <div className="crearClanSpotiBox">
           <div className="dosColumnas">
@@ -32,6 +32,7 @@ export const CrearClanInput = () => {
           </div>
           <button>Crear Clan</button>
         </div>
+        <span>Preguntas Frecuentes❔</span>
       </div>
       <div className="clanBackground">
         <div className="clanImgBackground circle"></div>

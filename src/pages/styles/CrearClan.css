@@ -240,20 +240,22 @@ padding-left: 750px;
 
 .crearClanSpotiContainer {
     display: grid;
-    width: 100vw;
-    justify-content: center;
+    grid-template-rows: 0.2fr 0.2fr 1fr 0.2fr;
     justify-items: center;
-    margin-bottom: 300px;
+    align-self: center;
+    justify-self: center;
+    margin-right: 50px;
+    margin-left: 50px;
 }
 
 .crearClanSpotiBox {
     display: grid;
     grid-template-rows: 1fr 1fr;
     width: 60vw;
-    height: max-content;
+    height: fit-content;
     border: solid #c1a4fc 4px;
     border-radius: 15px;
-    padding: 30px;
+    padding: 20px;
     grid-gap: 50px;
 }
 
@@ -261,15 +263,16 @@ padding-left: 750px;
     display: grid;
     justify-items: center;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
+    grid-gap: 30px;
+    width: 100%;
 
 }
 
 .inputCrearClan {
     display: grid;
     border-radius: 5px;
-    height: 80%;
-    width: 120%;
+    height: 90%;
+    width: 20vw;
     padding-left: 5px;
 }
 

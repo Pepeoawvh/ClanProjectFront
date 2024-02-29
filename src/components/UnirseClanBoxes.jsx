@@ -1,4 +1,7 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
+import { useCounter } from "../hooks/useCounter.js";
+import { clanesContext } from "../context/clanes/clanesContext.js";
+
 import "./styles/boxes.css";
 /* componente para mostrar cuando se haga click en unirse a un clan y seleccionar la plataforma*/
 export const UnirseClanBoxes = () => {

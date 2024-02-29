@@ -1,126 +1,141 @@
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
 
-body, h1, h2, h3, p, ul {
-    margin: 0;
-    padding: 0;
-  }
-  
-  header {
-    display: grid;
-    background-color: #02031f00;
-    padding: 10px;
-    margin-top: 10px;
-    z-index: 2;
-  }
-  
-  nav {
-    display: grid;
-    grid-template-columns: 0.2fr 1fr;
-    align-items: center;
-    justify-items: right;
-    color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  }
+header {
+  display: grid;
+  background-color: #02031f00;
+  padding: 10px;
+  margin-top: 10px;
+  z-index: 2;
+}
 
-  
-  .navIni{
-    margin-left: 50px;
-  }
-  
-  ul {
-    display: grid;
-    width: 70vw;
-    grid-template-columns: 1.3fr 1.3fr 1.3fr 2fr;
-    justify-self: center;
-    justify-content: left;
-  }
-  
+nav {
+  display: grid;
+  grid-template-columns: 0.2fr 1fr;
+  align-items: center;
+  justify-items: right;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
-  
-  .navButton:link {
-    font-size: 16px;
 
-  }
-  
-  .navButton:hover {
-    color: #ffffff;
-    transition: 0.5s;
-    font-weight: bold;
-    background-color: rgb(76, 0, 49); /* Color de fondo */
+.navIni {
+  margin-left: 50px;
+}
 
-  }
-  .navRegistro{
-    justify-self: right;
+ul {
+  display: grid;
+  width: 70vw;
+  grid-template-columns: 1.3fr 1.3fr 1.3fr 2fr;
+  justify-self: center;
+  justify-content: left;
+}
 
-  }
-  @keyframes fade-in {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  .navButton.active {
-    color: #ffffff;
-    font-weight:500;
-    background-color: rgb(32, 0, 70); /* Color de fondo */
-  }
 
-  .logOut.active {
-    color: #ffffff;
-    font-weight:500;
-    background-color: rgb(32, 0, 70); /* Color de fondo */
-    margin-left: 10px;
+.navButton:link {
+  font-size: 16px;
+
+}
+
+.navButton:hover {
+  color: #ffffff;
+  transition: 0.5s;
+  font-weight: bold;
+  background-color: rgb(76, 0, 49);
+  padding-right: 8px;
+  padding-left: 8px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-radius: 20px;
+  /* Color de fondo */
+
+}
+
+.navRegistro {
+  justify-self: right;
+
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
   }
 
-  .logOut:hover {
-    color: #ffffff;
-    transition: 0.5s;
-    font-weight: bold;
-    background-color: rgb(0, 0, 0); /* Color de fondo */
-    margin-left: 10px;
+  to {
+    opacity: 1;
+  }
+}
+
+.navButton.active {
+  color: #ffffff;
+  font-weight: 500;
+  background-color: rgb(32, 0, 70);
+  /* Color de fondo */
+}
+
+.logOut.active {
+  color: #ffffff;
+  font-weight: 500;
+  background-color: rgb(32, 0, 70);
+  /* Color de fondo */
+  margin-left: 10px;
+}
+
+.logOut:hover {
+  color: #ffffff;
+  transition: 0.5s;
+  font-weight: bold;
+  background-color: #ab1cc8;
+  /* Color de fondo */
+  margin-left: 10px;
+
+}
+
+.logOut:link {
+  font-size: 16px;
+  margin-left: 10px;
+
+}
+
+.logOut {
+  font-size: 16px;
+  margin-left: 10px;
+  color: #ffffff;
+  transition: 0.5s;
+  font-weight: bold;
+  background-color: rgb(76, 0, 49);
+  /* Color de fondo */
+  padding-right: 8px;
+  padding-left: 8px;
+  border: solid white 1px;
+  border-radius: 15px;
+}
+
+
+.logo {
+  width: 80px;
+  height: 80px;
+  background-image: url(../../public/images/LOGO.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  justify-self: right;
+  margin-right: 20px;
+}
+
+@media (max-width: 600px) {
+
+
+  nav div a img {
+    margin-left: 20px;
+    width: 10%;
+    height: 10%;
 
   }
-
-  .logOut:link {
-    font-size: 16px;
-    margin-left: 10px;
-
-  }
-
-  .logOut {
-    font-size: 16px;
-    margin-left: 10px;
-    color: #ffffff;
-    transition: 0.5s;
-    font-weight: bold;
-    background-color: rgb(76, 0, 49); /* Color de fondo */
-padding-right: 8px;
-padding-left: 8px;
-border: solid white 1px;
-border-radius: 15px;
-  }
-
-
-  .logo{
-    width: 80px;
-    height: 80px;
-    background-image: url(../../public/images/LOGO.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    justify-self: right;
-    margin-right: 20px;
-  }
-
-  @media (max-width: 600px) {
-
-
-    nav div a img {
-      margin-left: 20px;
-      width: 10%;
-      height: 10%;
-      
-    }
-  }
-
+}
