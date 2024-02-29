@@ -16,6 +16,7 @@ export const UsersProvider = ({children}) => {
 
   const logIn = async (userData) => {
     const url = `${import.meta.env.VITE_BACKENDURL}/users/login`;
+    try{
     const { data } = await axios.post(url, userData);
     localStorage.setItem("userToken", JSON.stringify(data.accessToken));
     console.log(data);
@@ -25,6 +26,11 @@ export const UsersProvider = ({children}) => {
       type: "LOGIN/REGISTER",
       payload: user,
     });
+  }
+    catch (error) {
+      console.error(error);
+      throw new Error ('Error al iniciar Sesión')
+    }
   };
 const logOut = () => {
 

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { CrearClanMain } from "../components/CrearClanMain";
 import { CrearClanNav } from "../components/CrearClanNav";
 
@@ -6,6 +6,7 @@ import "./styles/CrearClan.css";
 import { clanesContext } from "../context/clanes/clanesContext";
 import { usersContext } from "../context/users/usersContext";
 import { useNavigate } from "react-router-dom";
+import { SeleccionaPlataforma } from "../components/SeleccionaPlataforma";
 
 export const CrearClan = () => {
   const {isAuth} = useContext (usersContext)
@@ -26,7 +27,7 @@ export const CrearClan = () => {
       <div className="crearClanContainer">
         <CrearClanNav/>
         {
-          isServiceSelected && <CrearClanMain />
+          isServiceSelected ? <CrearClanMain/> : <SeleccionaPlataforma/>
         }
         
       </div>

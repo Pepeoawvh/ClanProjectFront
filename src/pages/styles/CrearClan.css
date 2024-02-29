@@ -314,6 +314,13 @@ color: white;
 
 
 .isSelected{
-background-color: #460353!important;
+background-color: #460353!important;}
     
+.seleccionaPlataformaTitle{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    justify-items: center;
+    align-items: center;
+    font-size: 45px;
 }
