@@ -6,8 +6,8 @@ export const MisSuscripcionesProfile = () => {
   const {user} = useContext (usersContext)
   return (
     <>
-    <div className='ClanesProfile'>
-      <ul className='ContainerClanes'>
+    <div className='profileDatos' id='suscripcionesBox'>
+      <ul className='containerProfile' id='suscripcionesList'>
         <li>
         <h3>Hola! {user.username}</h3>
         </li>

@@ -1,23 +1,27 @@
 .botonProfile {
     color: white;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 600px;
+    max-width: 690px;
     margin: 0 auto;
-    padding: 10px;
     box-sizing: border-box;
+    grid-gap: 20px;
   }
   
   .botonProfile button {
+    display: grid;
     background-color: #7316CC;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 20px 10px 20px;
+    width: 14vw;
     border-radius: 25px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    justify-self: center;
   }
   
   .botonProfile button:hover {
@@ -32,7 +36,8 @@
 
  .profileMainContainer{
   display: grid;
-  grid-template-rows: 0.5fr 1fr;
+  grid-template-rows: 0.1fr 1fr;
+  grid-gap: 20px;
  }
 
  .profileImgBackground {
