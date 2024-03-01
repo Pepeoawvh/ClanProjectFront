@@ -28,7 +28,7 @@ export const Profile = () => {
       </div>
       
       <div className="profileBackground">
-        <div className="profileImgBackground circle"></div>
+        <div className="profileImgBackground"></div>
       </div>
         
 

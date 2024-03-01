@@ -23,7 +23,7 @@ export const ProfileDatos = () => {
   return (
     <>
       <div className='profileDatos'>
-        <h3>Hola! {user.username}</h3>
+        <h3>¡Hola {user.username}!</h3>
         {!editing ? (
           <ul className='containerProfile'>
             <li>Nombre: {user.nombreCompleto}</li>
