@@ -240,7 +240,7 @@ padding-left: 750px;
     z-index: -2;
 }
 
-.crearClanSpotiContainer {
+.clanCredencialesContainer {
     display: grid;
     grid-template-rows: 0.2fr 0.2fr 1fr 0.2fr;
     justify-items: center;
