@@ -49,7 +49,7 @@ export const ClanesProvider = ({ children }) => {
       !registerData.usuarioCredencialesClan ||
       !registerData.contrasenaClan ||
       !state.selectedService ||
-      !state.cupos||
+      !state.cupos ||
       !state.tipoDeClan
     ) {
       toast("Debes completar todos los datos", {
@@ -57,8 +57,8 @@ export const ClanesProvider = ({ children }) => {
         position: "bottom-right",
         border: "1px solid black",
         style: { background: "black" },
-      })
-     return
+      });
+      return;
     }
     const bodyClan = {
       admin: userId,
@@ -68,13 +68,13 @@ export const ClanesProvider = ({ children }) => {
       cuposClan: state.cupos,
       tipoClan: state.tipoDeClan,
     };
-    const token = JSON.parse(localStorage.getItem('userToken'))
+    const token = JSON.parse(localStorage.getItem("userToken"));
     const { data } = await axios.post(url, bodyClan, {
       headers: {
-        'authorization': `Token ${token}`
-      }
+        authorization: `Token ${token}`,
+      },
     });
-    console.log(data)
+    console.log(data);
     dispatch({
       type: "LIMPIARCLANES",
       payload: initialClanesState,

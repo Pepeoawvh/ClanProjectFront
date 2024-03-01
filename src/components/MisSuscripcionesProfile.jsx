@@ -11,7 +11,7 @@ export const MisSuscripcionesProfile = () => {
     <div className='profileDatos' id='suscripcionesBox'>
       <ul className='containerProfile' id='suscripcionesList'>
         <li>
-        <h3>Hola {user.username}</h3>
+        <h3>¡Hola {user.username}!</h3>
         </li>
        
        {
