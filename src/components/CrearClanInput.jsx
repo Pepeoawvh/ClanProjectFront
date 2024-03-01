@@ -1,4 +1,4 @@
-/* import { useContext, useState } from "react";
+ import { useContext, useState } from "react";
 import "../pages/styles/CrearClan.css";
 import { clanesContext } from "../context/clanes/clanesContext";
 
@@ -45,7 +45,7 @@ export const CrearClanInput = () => {
               </div>
             </form>
           </div>
-          <button>Crear Clan</button>
+          <button className="selectedButton">Crear Clan</button>
         </div>
       
       </div>
@@ -55,4 +55,4 @@ export const CrearClanInput = () => {
     </>
   );
 };
- */
+ 

@@ -72,7 +72,10 @@
     color: white;
     font-weight: 600;
 
+    
 }
+
+
 .clanDisponibleBoxImg{
   display: grid;
   grid-row: span 2;
