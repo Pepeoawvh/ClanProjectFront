@@ -1,17 +1,27 @@
 .crearClanMain {
     display: grid;
-    grid-template-rows: 0.1fr 0.5fr 1fr 0.1fr 0.1fr;
     justify-items: center;
     animation: fade-in 1s forwards;
     transition-delay: 1s;
 
 }
+.crearClanMain form{    
+    display: grid;
+    grid-template-rows: 0.1fr 0.5fr 1fr 0.1fr 0.1fr;
+    justify-items: center;
+    animation: fade-in 1s forwards;
+    transition-delay: 1s;
+width: fit-content;
+}
+    
+    
 
 .crearClanContainer {
     display: grid;
     grid-template-columns: 0.3fr 1fr;
-    margin: 50px;
+    margin: 40px;
     color: white;
+    justify-content: center;
 }
 
 .crearClanNav {
