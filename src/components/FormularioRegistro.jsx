@@ -11,8 +11,6 @@ export const FormularioRegistro = () => {
     nombreCompleto: "",
     correo: "",
     contrasena: "",
-    direccion: "", // Agregado campo dirección
-    edad: "", // Agregado campo edad
   };
   const { register } = useContext(usersContext);
   const [registerData, setRegisterData] = useState(initialRegisterData);
@@ -72,22 +70,14 @@ export const FormularioRegistro = () => {
           name="correo"
           onChange={onChange}
         />
-        <input
+        {/* <input
           className="formItem"
           type="text"
           placeholder="Dirección"
           value={registerData.direccion}
           name="direccion"
           onChange={onChange}
-        />
-        <input
-          className="formItem"
-          type="number"
-          placeholder="Edad"
-          value={registerData.edad}
-          name="edad"
-          onChange={onChange}
-        />
+        /> */}
         <input
           className="formItem"
           type="password"
