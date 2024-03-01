@@ -12,7 +12,7 @@ const {user} = useContext (usersContext)
     <div className='ClanesProfile'>
       <ul className='ContainerClanes'>
         <li>
-        <h3>Hola! {user.username}</h3>
+        <h3>Hola {user.username}</h3>
         </li>
        
        {
