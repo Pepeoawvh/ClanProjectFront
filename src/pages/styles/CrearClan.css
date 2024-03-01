@@ -100,6 +100,7 @@
 
 .counterButton {
     font-size: 70px;
+    border-radius: 200px;
 }
 
 .counter {
