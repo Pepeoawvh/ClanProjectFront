@@ -38,7 +38,12 @@ const logOut = () => {
   dispatch({
     type: "LOGOUT"
   })
-  toast("Sesion cerrada");
+  toast("Sesion cerrada", {
+    duration: 2000,
+    position: "bottom-right",
+    border: '1px solid black',
+    style: {background: "black",}
+  });
   navegar('/')
 }
 

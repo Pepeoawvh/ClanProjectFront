@@ -8,17 +8,15 @@ import axios from "axios";
 import { toast } from "react-toastify";
 
 export const FormularioRegistro = () => {
-
   const initialRegisterData = {
     nombreCompleto: "",
     correo: "",
     contrasena: "",
   };
-  const {register} = useContext(usersContext);
+  const { register } = useContext(usersContext);
   const [registerData, setRegisterData] = useState(initialRegisterData);
   const [isLoading, setIsLoading] = useState(false);
   const navegar = useNavigate();
-
 
   const onChange = (e) => {
     setRegisterData({
@@ -31,11 +29,16 @@ export const FormularioRegistro = () => {
     e.preventDefault();
     setIsLoading(true);
     try {
-     await register(registerData)
+      await register(registerData);
       setIsLoading(false);
       setRegisterData(initialRegisterData);
-      toast("Registro exitoso, Bienvenido!");
-      navegar("/")
+      toast("Registro exitoso, Bienvenido!", {
+        duration: 2000,
+        position: "bottom-right",
+        border: '1px solid black',
+        style: {background: "black",}
+      });
+      navegar("/");
     } catch (error) {
       console.log(error);
       setIsLoading(false);
@@ -45,7 +48,6 @@ export const FormularioRegistro = () => {
 
   return (
     <form className="formBanner" onSubmit={onSubmit}>
-
       <div className="formReg" id="formReg">
         <input
           className="formItem"
@@ -72,7 +74,8 @@ export const FormularioRegistro = () => {
           value={registerData.contrasena}
           name="contrasena"
           onChange={onChange}
-        /> <input
+        />{" "}
+        <input
           className="formItem"
           type="password"
           placeholder="Confirma Password"
@@ -81,13 +84,17 @@ export const FormularioRegistro = () => {
           onChange={onChange}
         />
         {/**contraseña */}
-        <button className="formItem formButton" id="botonRegistro" type="submit" disabled={isLoading}>
-        {
+        <button
+          className="formItem formButton"
+          id="botonRegistro"
+          type="submit"
+          disabled={isLoading}
+        >
+          {
             isLoading ? "Cargando..." : "Registrarse" // renderizado condicional
           }
         </button>
       </div>
-      
     </form>
   );
 };
