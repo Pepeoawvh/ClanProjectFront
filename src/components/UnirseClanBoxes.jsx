@@ -15,26 +15,27 @@ export const UnirseClanBoxes = () => {
     valorServicio,
     selectedClan,
   } = useContext(clanesContext);
-  const {user} = useContext(usersContext)
+  const { user } = useContext(usersContext);
   const { count, increment, decrement, reset } = useCounter(1, cuposServicio);
   useEffect(() => {
-    
     obtenerServicio();
     reset();
   }, [isServiceSelected]);
-const getClanes = async () => {
-  const url = `${import.meta.env.VITE_BACKENDURL}/clan/getAll/${user._id}?plataforma=${isServiceSelected}`
-  const token = JSON.parse(localStorage.getItem('userToken'))
-  const { data } = await axios.get(url,{
-    headers:{
-      "authorization":`Token ${token}`
-    }
-  });
-  console.log (data); 
-}
-useEffect(() => {
-  getClanes()
-},[])
+  const getClanes = async () => {
+    const url = `${import.meta.env.VITE_BACKENDURL}/clan/getAll/${
+      user._id
+    }?plataforma=${isServiceSelected}`;
+    const token = JSON.parse(localStorage.getItem("userToken"));
+    const { data } = await axios.get(url, {
+      headers: {
+        authorization: `Token ${token}`,
+      },
+    });
+    console.log(data);
+  };
+  useEffect(() => {
+    getClanes();
+  }, []);
   return (
     <div className="clanDisponibleContainer">
       <span className="unirseClanTitle">
@@ -51,7 +52,6 @@ useEffect(() => {
         </div>
         <div className="clanBoxCupos">{cuposServicio} Cupos Disponibles</div>
       </div>
-      
     </div>
   );
 };

@@ -8,7 +8,6 @@ import { UnirseClanBoxes } from "../components/UnirseClanBoxes";
 import "./styles/CrearClan.css";
 import "./styles/UnirseClan.css";
 
-
 export const UnirseClan = () => {
   const { isAuth } = useContext(usersContext);
   const { isServiceSelected } = useContext(clanesContext);
