@@ -9,8 +9,8 @@ const {user} = useContext (usersContext)
 
   return (
     <>
-    <div className='ClanesProfile'>
-      <ul className='ContainerClanes'>
+    <div className='profileDatos' id='misClanesBox'>
+      <ul className='containerProfile' id='misClanesList'>
         <li>
         <h3>Hola {user.username}</h3>
         </li>

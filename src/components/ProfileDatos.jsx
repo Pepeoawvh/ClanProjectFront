@@ -22,7 +22,7 @@ export const ProfileDatos = () => {
 
   return (
     <>
-      <div className='ProfileDatos'>
+      <div className='profileDatos'>
         <h3>Hola! {user.username}</h3>
         {!editing ? (
           <ul className='containerProfile'>
@@ -72,16 +72,16 @@ export const ProfileDatos = () => {
                   onChange={handleInputChange}
                 />
               </li>
-              <li>
-                {/* Número de Strikes:
+{/*               <li>
+                Número de Strikes:
                 <input
                   type='number'
                   name='strikes'
                   value={newUser.strikes}
                   onChange={handleInputChange}
-                /> */}
-              </li>
-              <li>
+                />
+              </li> */}
+              <li className='editProfileButtons'>
                 <button type='submit'>Guardar</button>
                 <button onClick={() => setEditing(false)}>Cancelar</button>
               </li>
