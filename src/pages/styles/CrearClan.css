@@ -110,6 +110,7 @@ width: fit-content;
 
 .counterButton {
     font-size: 70px;
+    border-radius: 200px;
 }
 
 .counter {
@@ -357,6 +358,27 @@ padding-left: 750px;
 }
 
 .crearClanSpotiBox button:hover {
+
+    background-color: #231e44;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+
+}
+
+.selectedButton button{
+    width: 271.91px;
+    height: fit-content;
+    padding: 15px;
+    border-radius: 100px;
+    background-color: #322B61;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.476);
+    
+  }
+
+  
+.selectedButton button:hover{
 
     background-color: #231e44;
     color: rgb(255, 255, 255);

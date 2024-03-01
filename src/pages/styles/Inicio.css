@@ -106,6 +106,31 @@
     font-weight: 600;
 }
 
+.iniActions2 {
+    display: grid;
+    grid-template-rows: 1fr 0.1fr;
+    justify-items: center;
+}
+
+.iniActions2 button {
+    width: 191.91px;
+    height: fit-content;
+    padding: 10px;
+    border-radius: 100px;
+    background-color: #322B61;
+
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.476);
+    margin-top: 170px;
+
+}
+
+.iniActions2 button:hover {
+    background-color: #231e44;
+    color: white;
+    font-weight: 600;
+}
+
 .iniActions span {
     font-size: 17px;
     margin-top: -50px;
