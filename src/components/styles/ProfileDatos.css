@@ -1,28 +1,53 @@
-.ProfileDatos {
-    margin: 0 auto;
-    width: 50%;
-    padding: 2rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.306);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    animation: fade-in 1s forwards;
-    transition-delay: 1s;
+.profileDatos {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 1fr;
+  height: fit-content;
+  width: 50%;
+  border: solid 3px #7316CC;
+  padding: 40px;
+  justify-content: center;
+  justify-self: center;
+  grid-gap: 15px;
+  border-radius: 15px;
+  position: relative;
+  z-index: 2;
+  /* modifica el orden de apilamiento, puede sobreponer o trasponer elementos */
+  opacity: 0;
+  animation: fade-in 2s forwards;
+  transition-delay: 2s;
+  color: white;
+  background-color: rgba(1, 15, 27, 0.331);
   }
   
-  .ProfileDatos h3 {
+  .profileDatos h3 {
     text-align: center;
-    margin-bottom: 1rem;
+    font-size: 25px;
   }
-  
+  .profileDatos input {
+    display: grid;
+    border: solid 2px #7316CC;
+    border-radius: 3px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    text-shadow: 1px 1px 3px rgba(30, 30, 30, 0.572);
+    align-self: top;
+    align-items: center;
+    height: 50px;
+    width: 420px;
+    background-color: #f2508e1e;
+    color: white;
+    padding: 10px;
+    justify-self: center;
+
+  }
   .containerProfile,
   .containerProfileForm {
     list-style: none;
     padding: 0;
     margin: 0;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 0.5fr;
     gap: 1rem;
     opacity: 0;
     animation: fade-in 1s forwards;
@@ -70,4 +95,13 @@
   .containerProfileForm button:focus {
     outline: none;
     box-shadow: 0 0 2px 1px rgba(0, 127, 255, 0.5);
+  }
+
+  .editProfileButtons{
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .editProfileButtons button{
+    background-color: rgba(215, 7, 194, 0.242) !important;
   }
