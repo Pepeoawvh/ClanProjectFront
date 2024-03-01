@@ -89,9 +89,9 @@ export const CrearClanMain = () => {
             </span>
           </div>
 
-          <span className="titles">¿Quieres publicar tu Clan?</span>
-          <div className="crearClanButtonContainer">
-            <div className="crearClan">
+          <span className="titles publicarClanTitles">¿Quieres publicar tu Clan?</span>
+          <div className="publicarClanButtonContainer">
+            <div className="publicarClan">
               <button
                 className={selectedButton === "publico" ? "isSelected" : ""}
                 onClick={() => {
@@ -105,7 +105,7 @@ export const CrearClanMain = () => {
                 👀 Otros usuarios podrán ver tu clan
               </tool-tip>
             </div>
-            <div className="crearClan">
+            <div className="publicarClan">
               <button
                 className={selectedButton === "privado" ? "isSelected" : ""}
                 onClick={() => {
@@ -120,21 +120,22 @@ export const CrearClanMain = () => {
               </tool-tip>
             </div>
           </div>
-          <div className="next">
+          {/* <div className="next">
             {selectedButton && (
               <button onClick={() => setAgregarCredenciales(true)}>
                 Siguiente
               </button>
             )}
-          </div>
-          <div className="clanCredencialesContainer">
+          </div> */}
+          <div className="crearClanCredsContainer">
         <div className="titles">Agrega tus credenciales!</div>
         <div className="subTitles">
           Tu información se maneja de forma encriptada para tu seguridad🔐
         </div>
-        <div className="crearClanSpotiBox">
-          <div className="dosColumnas">
+        <div className="crearClanCredsBox">
+          
             <form>
+            <div className="dosColumnas">
               <div className="campoEntrada">
                 <label className="inputTitles">
                   Correo Asociado a la cuenta:
@@ -144,7 +145,7 @@ export const CrearClanMain = () => {
                   id="correo"
                   name="correo"
                   value={registerClanData.usuarioCredencialesClan}
-                  className="inputCrearClan"
+                  className="formItem"
                   type="email"
                   placeholder="cuenta@tumail.com"
                   onChange={onChange}
@@ -156,15 +157,15 @@ export const CrearClanMain = () => {
                   id="contrasena"
                   name="contrasena"
                   value={registerClanData.contrasenaClan}
-                  className="inputCrearClan"
+                  className="formItem"
                   type="password"
                   placeholder="Contraseña de la cuenta"
                   onChange={onChange}
                 />
               </div>
+              </div>
             </form>
-          </div>
-          <button>Crear Clan</button>
+          <button className="formButton crearClanButton" id="crearClanButton">Crear Clan</button>
         </div>
         <span>Preguntas Frecuentes❔</span>
       </div>
