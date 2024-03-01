@@ -1,0 +1,64 @@
+/* Estilos para pantallas grandes */
+.footer {
+    display: flex;
+
+    letter-spacing: 2px;
+    background-color: rgba(0, 0, 0, 0.38);
+    height: 40px;
+  
+    justify-content: center;
+  
+    /* Lo coloca al final */
+    width: 100%;
+    margin-top: 570px;
+  }
+  
+  .footer-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+  }
+  
+  .left {
+    text-align: left;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  .right {
+    display: flex;
+    align-items: center;
+  
+  }
+  
+  .right a {
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+  
+  .right img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Estilos para dispositivos móviles */
+  @media screen and (max-width: 768px) {
+    .footer-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      justify-items: center;
+      font-size: 15px;
+      padding-bottom: 10px;
+    }
+  
+    .footer {
+      height: 100px;
+      position: sticky;
+    }
+  }

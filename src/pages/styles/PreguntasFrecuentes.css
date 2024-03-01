@@ -1,0 +1,66 @@
+.megacontainerfaq {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(../../public/images/bgquees.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
+  padding: 200px;
+  transition-delay: 4s;
+  margin-top: -190px;  
+}
+
+
+.container {
+  text-align: center;
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-image: url('../../public/images/bgquees.png');
+  background-size: cover;   animation: fade-in 2s forwards;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-weight: bolder;
+}
+
+.faq {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+  flex: 1;
+}
+
+.question {
+  margin: 10px; 
+  background-color: rgba(127, 127, 127, 0.8);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ 
+}
+
+.question h2 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.question p {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #ffffff;
+}

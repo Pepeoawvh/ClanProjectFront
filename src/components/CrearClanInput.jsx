@@ -32,7 +32,7 @@ export const CrearClanInput = () => {
           </div>
           <button>Crear Clan</button>
         </div>
-        <span>Preguntas Frecuentes❔</span>
+      
       </div>
       <div className="clanBackground">
         <div className="clanImgBackground circle"></div>

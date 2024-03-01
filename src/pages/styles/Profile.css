@@ -13,7 +13,7 @@
   
   .botonProfile button {
     display: grid;
-    background-color: #7316CC;
+    background-color: #322B61;
     border: none;
     padding: 10px 20px 10px 20px;
     width: 14vw;
@@ -22,10 +22,15 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
     justify-self: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.476);
+    transition: background-color 0.3s ease;
   }
   
   .botonProfile button:hover {
-    background-color: #7316CC;
+    background-color: #2d084f;
+    background-color: #231e44;
+    color: white;
+    font-weight: 600;
   }
   
   .botonProfile button:focus {
@@ -41,29 +46,26 @@
  }
 
  .profileImgBackground {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr;
-  background-image: url(../../public/images/bgini.jpeg);
-  height: 100%;
+  background-image: url(../../public/images/bginix.jpeg);
+  height: 120vh; 
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
-  z-index: -2 !important;
-}
-
-.profileBackground {
-  height: 100%;
-  width: 100%;
-  background-color: #02031d;
-  animation: fade-in 1s forwards;
-  transition-delay: 1s;
+  background-size: cover;
   position: absolute;
-  top: 2cm;
-  /* left: 3.5cm; */
   right: 0;
   bottom: 0;
   z-index: -2;
+  margin-bottom: -120px;
+}
+ 
+.profileImgBackground::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.445); /* Color semi-transparente para oscurecer */
 }
 

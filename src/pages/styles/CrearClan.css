@@ -16,14 +16,15 @@
 
 .crearClanNav {
     display: grid;
-    grid-template-rows: 0.1fr 1fr;
+    grid-template-rows: 0.01fr 0.1fr;
     align-items: center;
-    border: solid 4px white;
+    border: solid 3px white;
     border-radius: 20px;
-    grid-gap: 20px;
-    padding: 10px;
-    height: 100vh;
+    grid-gap: 2px;
+    padding: 1px;
+    height: 70vh;
     position: static;
+    padding: 10px;
 }
 
 .crearClanNav span {
@@ -31,7 +32,7 @@
     text-align: center;
     justify-self: center;
     width: fit-content;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .crearClanNavGallery {
@@ -181,14 +182,24 @@ border-radius: 50%;
 }
 
 .crearClan button {
-    display: grid;
-    background-color: #7316CC;
-    justify-self: center;
-    align-self: center;
-    padding: 20px;
-    border-radius: 50px;
+    width: 271.91px;
+    height: fit-content;
+    padding: 15px;
+    border-radius: 100px;
+    background-color: #322B61;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.476);
+
 }
 
+.crearClan button:hover{
+
+    background-color: #231e44;
+    color: white;
+    font-weight: 600;
+
+}
 
 .next{
 padding-left: 750px;
@@ -196,14 +207,14 @@ padding-left: 750px;
 }
 
 .next button {
-    display: grid;
-    background-color: #5e00b5;
-    justify-self: right;
-    align-self: right;
-    padding: 20px;
-    width: 190%;
-    border-radius: 30px;
-    align-content: right;
+    width: 271.91px;
+    height: fit-content;
+    padding: 15px;
+    border-radius: 100px;
+    background-color: #322B61;
+  
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.476);
 
 }
 
@@ -274,6 +285,7 @@ padding-left: 750px;
     height: 90%;
     width: 20vw;
     padding-left: 5px;
+    color: #02031d;
 }
 
 .inputTittles{
@@ -308,14 +320,24 @@ color: white;
 }
 
 .crearClanSpotiBox button {
-    display: grid;
-    color: white;
-    background-color: #AF16CC;
-    width: 30%;
-    border-radius: 50px;
+    width: 271.91px;
+    height: fit-content;
+    padding: 15px;
+    border-radius: 100px;
+    background-color: #322B61;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.476);
     align-items: center;
     justify-self: center;
+    transition: 0.5s;
+}
 
+.crearClanSpotiBox button:hover{
+
+    background-color: #231e44;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
 
 }
 
