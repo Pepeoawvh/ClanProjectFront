@@ -89,7 +89,10 @@ export const CrearClanMain = () => {
               </button>
             )}
           </div>
+          <CrearClanInput/>
         </div>
+
+      
       )}
     </>
   );

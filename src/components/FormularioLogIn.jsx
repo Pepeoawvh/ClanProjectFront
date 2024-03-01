@@ -9,7 +9,7 @@ export const FormularioLogIn = () => {
     email: "",
     password: "",
   };
-const {logIn} = useContext(usersContext)
+  const { logIn } = useContext(usersContext);
   const [userData, setUserData] = useState(initialUserData);
   const [isLoading, setIsLoading] = useState(false);
   const navegar = useNavigate();
@@ -25,13 +25,23 @@ const {logIn} = useContext(usersContext)
     e.preventDefault();
     setIsLoading(true);
     try {
-      await logIn(userData)
+      await logIn(userData);
       setIsLoading(false);
       setUserData(initialUserData);
-      toast("Inicio de sesion exitoso");
-      navegar("/")
+      toast("Inicio de sesion exitoso",{
+        duration: 2000,
+        position: "bottom-right",
+        border: '1px solid black',
+        style: {background: "black",}
+      });
+      navegar("/");
     } catch (error) {
-      toast.error(error.message)
+      toast(error.message,  {
+        duration: 100,
+        position: "bottom-right",
+        border: '1px solid #dff',
+        style: {background: "black",}
+      });
       setIsLoading(false);
       setUserData(initialUserData);
     }
@@ -59,7 +69,12 @@ const {logIn} = useContext(usersContext)
           onChange={onChange}
         />
         {/**contraseña */}
-        <button className="formItem formButton" id="botonLogIn" type="submit" disabled={isLoading}>
+        <button
+          className="formItem formButton"
+          id="botonLogIn"
+          type="submit"
+          disabled={isLoading}
+        >
           {
             isLoading ? "Cargando..." : "Iniciar Sesion" // renderizado condicional
           }
@@ -68,4 +83,3 @@ const {logIn} = useContext(usersContext)
     </form>
   );
 };
-

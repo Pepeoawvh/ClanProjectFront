@@ -41,7 +41,18 @@ export const ClanesProvider = ({ children }) => {
             payload: tipoDeClan,
         })
     }
-
+    const registerClan = async (registerData) => {
+        const url = `${import.meta.env.VITE_BACKENDURL}/clan/create`
+        const {data} = await axios.post(url,registerData)
+        localStorage.setItem("userToken", JSON.stringify(data.data));
+        console.log(data);
+        const clan = jwtDecode(data.data);
+        console.log(clan);
+        dispatch({
+          type: "REGISTRARCLAN",
+          payload: clan,
+        });
+      };
 
     return (
         <clanesContext.Provider 
@@ -49,6 +60,7 @@ export const ClanesProvider = ({ children }) => {
                 selectServiceId,
                 obtenerServicio,
                 selectedClan,
+                registerClan,
                 isServiceSelected: state.selectedService,
                 nombreServicio: state.nombreServicio,
                 cuposServicio: state.cupos,
