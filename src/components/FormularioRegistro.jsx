@@ -2,23 +2,22 @@ import React, { useState } from "react";
 import { useContext } from "react";
 import { usersContext } from "../context/users/usersContext";
 import { useNavigate } from "react-router-dom";
-
-import "./styles/Formularios.css";
-import axios from "axios";
 import { toast } from "react-toastify";
 
-export const FormularioRegistro = () => {
+import "./styles/Formularios.css";
 
+export const FormularioRegistro = () => {
   const initialRegisterData = {
     nombreCompleto: "",
     correo: "",
     contrasena: "",
+    direccion: "", // Agregado campo dirección
+    edad: "", // Agregado campo edad
   };
-  const {register} = useContext(usersContext);
+  const { register } = useContext(usersContext);
   const [registerData, setRegisterData] = useState(initialRegisterData);
   const [isLoading, setIsLoading] = useState(false);
   const navegar = useNavigate();
-
 
   const onChange = (e) => {
     setRegisterData({
@@ -31,21 +30,31 @@ export const FormularioRegistro = () => {
     e.preventDefault();
     setIsLoading(true);
     try {
-     await register(registerData)
+      await register(registerData);
       setIsLoading(false);
       setRegisterData(initialRegisterData);
-      toast("Registro exitoso, Bienvenido!");
-      navegar("/")
+      toast("Registro exitoso, Bienvenido!", {
+        duration: 2000,
+        position: "bottom-right",
+        border: '1px solid black',
+        style: {background: "black",}
+      });
+      navegar("/");
     } catch (error) {
       console.log(error);
       setIsLoading(false);
       setRegisterData(initialRegisterData);
+      toast("Ups, algo salió mal, inténtalo nuevamente!", {
+        duration: 2000,
+        position: "bottom-right",
+        border: '1px solid black',
+        style: {background: "black",}
+      })
     }
   };
 
   return (
     <form className="formBanner" onSubmit={onSubmit}>
-
       <div className="formReg" id="formReg">
         <input
           className="formItem"
@@ -54,8 +63,7 @@ export const FormularioRegistro = () => {
           value={registerData.nombreCompleto}
           name="nombreCompleto"
           onChange={onChange}
-        />{" "}
-        {/**nombreCompleto */}
+        />
         <input
           className="formItem"
           type="email"
@@ -63,8 +71,23 @@ export const FormularioRegistro = () => {
           value={registerData.correo}
           name="correo"
           onChange={onChange}
-        />{" "}
-        {/**correo */}
+        />
+        <input
+          className="formItem"
+          type="text"
+          placeholder="Dirección"
+          value={registerData.direccion}
+          name="direccion"
+          onChange={onChange}
+        />
+        <input
+          className="formItem"
+          type="number"
+          placeholder="Edad"
+          value={registerData.edad}
+          name="edad"
+          onChange={onChange}
+        />
         <input
           className="formItem"
           type="password"
@@ -72,22 +95,16 @@ export const FormularioRegistro = () => {
           value={registerData.contrasena}
           name="contrasena"
           onChange={onChange}
-        /> <input
-          className="formItem"
-          type="password"
-          placeholder="Confirma Password"
-          value={registerData.contrasena}
-          name="contrasena"
-          onChange={onChange}
         />
-        {/**contraseña */}
-        <button className="formItem formButton" id="botonRegistro" type="submit" disabled={isLoading}>
-        {
-            isLoading ? "Cargando..." : "Registrarse" // renderizado condicional
-          }
+        <button
+          className="formItem formButton"
+          id="botonRegistro"
+          type="submit"
+          disabled={isLoading}
+        >
+          {isLoading ? "Cargando..." : "Registrarse"}
         </button>
       </div>
-      
     </form>
   );
 };

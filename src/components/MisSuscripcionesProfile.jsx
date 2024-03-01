@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import './styles/MisclanesProfile.css'
+import { NavLink } from 'react-router-dom'; 
 import { usersContext } from '../context/users/usersContext'
 import { SuscripcionesUser } from './SuscripcionesUser'
 
@@ -19,6 +20,12 @@ export const MisSuscripcionesProfile = () => {
         ))
        }
       </ul>
+      <div className="iniActions2">
+    
+    <NavLink to="/UnirseClan">
+      <button>Unirse a un Clan🪅</button>
+    </NavLink>
+  </div>
     </div>
     </>
   

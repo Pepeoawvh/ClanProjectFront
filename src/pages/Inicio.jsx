@@ -1,35 +1,40 @@
-import { NavLink, Link } from "react-router-dom"; // Importamos los componentes <NavLink /> y <Link /> desde la carpeta node_modules
+import { NavLink } from "react-router-dom";
 import React from "react";
 import "./styles/Inicio.css";
+import "../components/Footer";
+import Footer from "../components/Footer"; 
 
 export const Inicio = () => {
   return (
     <>
       <div className="iniContainer">
         <div className="iniTitle">
-          <span className="iniTitleName"> CLAN </span>
-          <span className="iniSubTitle"> CUENTAS COMPARTIDAS </span>
+          <div className="logoHome">
+            <div className="logoContainer"></div>
+          </div>
+          <span className="iniSubTitle"> Cuentas Compartidas </span>
           <span className="iniText">
-            Comparte y unete a subscripciones, ahorra y optimiza el pago de tus
-            servicios!
+            Servicio para compartir y unirse a distintos planes, ahorrando y optimizando el pago de servicios.
           </span>
         </div>
         <div className="iniAction">
           <div className="iniActions">
-          <NavLink to="/UnirseClan"><button>Unirme a una Suscripcion</button></NavLink>
-            <span> Unete a un clan y ahorra!</span>
+            <NavLink to="/UnirseClan"><button>Unirme a una Suscripcion</button></NavLink>
+            <span> ¡Únete a un Clan y ahorra!</span>
           </div>
           <div className="iniActions">
-          <NavLink to="/CrearClan"><button>Compartir mi Suscripcion</button></NavLink>
-            <span> Crea un clan y ahorra!</span>
+            <NavLink to="/CrearClan"><button>Compartir mi Suscripcion</button></NavLink>
+            <span> ¡Comparte un Clan y ahorra!</span>
           </div>
         </div>
       </div>
-
       <div className="iniDarkLeft"></div>
       <div className="iniBackground">
-        <div className="iniImgBackground circle"></div>
+        <div className="iniImgBackground"></div>
       </div>
+
+    
+   
     </>
   );
 };

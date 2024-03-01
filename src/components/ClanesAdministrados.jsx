@@ -13,6 +13,15 @@ export const ClanesAdministrados = ({id}) => {
     obtenerClan()
   }, [])
  return (
-    <div>{JSON.stringify(infoClanes?.clan.plataformaClan)}{infoClanes?.clan.cuposClan}</div>
+    <div>
+      <p>id Plataforma :{infoClanes?.clan.plataformaClan}</p>
+      <p>Estado Clan :{infoClanes?.clan.estadoClan}</p>
+      <p>Miembros :{infoClanes?.clan.miembros}</p>
+      <p>Cupos Clan :{infoClanes?.clan.cuposClan}</p>
+      <p>Tipo de Clan :{infoClanes?.clan.tipoClan}</p>
+      <p>Fecha de creacion :{infoClanes?.clan.fechaCreacion}</p>
+      
+
+    </div>
   )
 }

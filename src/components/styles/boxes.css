@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 0.1fr 1fr 1fr;
-  height: fit-content;
+  height: 490px;
   width: 100%;
   align-self: top;
   padding: 20px;
@@ -56,16 +56,26 @@
 
 }
 .buttonClanBox{
-  display: grid;
-  background-color:#322b61 ;
-  border: solid white 3px;
-  padding: 5px 30px 5px 30px;
-  font-weight: 600;
-  font-size: 20px;
-  border-radius: 60px;
-  align-items: center;
+  width: 271.91px;
+  height: fit-content;
+  padding: 15px;
+  border-radius: 100px;
+  background-color: #322B61;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.476);
   
 }
+
+.buttonClanBox:hover{
+  background-color: #231e44;
+    color: white;
+    font-weight: 600;
+
+    
+}
+
+
 .clanDisponibleBoxImg{
   display: grid;
   grid-row: span 2;

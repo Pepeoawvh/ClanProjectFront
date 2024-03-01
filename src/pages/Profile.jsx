@@ -12,7 +12,7 @@ export const Profile = () => {
     <>
      <div className='profileMainContainer'>
      <div className='botonProfile'>
-      <button  className onClick={()=>{setProfileSelected ('datos')}}>Mis Datos</button>
+      <button onClick={()=>{setProfileSelected ('datos')}}>Mis Datos</button>
       <button onClick={()=>{setProfileSelected ('clanes')}}>Mis Clanes </button>
       <button onClick={()=>{setProfileSelected('suscripciones')}}>Mis Suscripciones</button>
      </div>
@@ -28,7 +28,7 @@ export const Profile = () => {
       </div>
       
       <div className="profileBackground">
-        <div className="profileImgBackground circle"></div>
+        <div className="profileImgBackground"></div>
       </div>
         
 

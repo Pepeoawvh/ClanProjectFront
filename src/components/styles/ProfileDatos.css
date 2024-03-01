@@ -4,7 +4,7 @@
   grid-template-rows: 0.1fr 1fr;
   height: fit-content;
   width: 50%;
-  border: solid 3px #7316CC;
+  border: solid 3px #ffffffb5;
   padding: 40px;
   justify-content: center;
   justify-self: center;
@@ -18,6 +18,7 @@
   transition-delay: 2s;
   color: white;
   background-color: rgba(1, 15, 27, 0.331);
+  animation: fade-in 1s forwards;
   }
   
   .profileDatos h3 {
@@ -26,9 +27,9 @@
   }
   .profileDatos input {
     display: grid;
-    border: solid 2px #7316CC;
+    border: solid 2px #332a2a;
     border-radius: 3px;
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: montserrat;
     font-size: 20px;
     text-shadow: 1px 1px 3px rgba(30, 30, 30, 0.572);
     align-self: top;
