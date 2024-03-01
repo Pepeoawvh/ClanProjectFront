@@ -43,6 +43,12 @@ export const FormularioRegistro = () => {
       console.log(error);
       setIsLoading(false);
       setRegisterData(initialRegisterData);
+      toast("Ups, algo salio mal, intentalo nuevamente!", {
+        duration: 2000,
+        position: "bottom-right",
+        border: '1px solid black',
+        style: {background: "black",}
+      })
     }
   };
 
@@ -56,7 +62,7 @@ export const FormularioRegistro = () => {
           value={registerData.nombreCompleto}
           name="nombreCompleto"
           onChange={onChange}
-        />{" "}
+        />{" "} 
         {/**nombreCompleto */}
         <input
           className="formItem"
@@ -75,14 +81,6 @@ export const FormularioRegistro = () => {
           name="contrasena"
           onChange={onChange}
         />{" "}
-        <input
-          className="formItem"
-          type="password"
-          placeholder="Confirma Password"
-          value={registerData.contrasena}
-          name="contrasena"
-          onChange={onChange}
-        />
         {/**contraseña */}
         <button
           className="formItem formButton"
