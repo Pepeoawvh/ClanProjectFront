@@ -34,8 +34,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 120vh;
-    background-image: url(images/bgini.jpeg);
+    height: 115vh;
+    background-image: url(/images/bgini.jpeg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -45,7 +45,7 @@
 }
 
 .iniBackground {
-    height: 100vh;
+    height: 87%;
     width: 100vw;
     background-color: #02031d;
     animation: fade-in 1s forwards;

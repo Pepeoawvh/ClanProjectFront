@@ -1,8 +1,7 @@
 import { NavLink } from "react-router-dom";
 import React from "react";
 import "./styles/Inicio.css";
-import "../components/Footer";
-import Footer from "../components/Footer"; 
+
 
 export const Inicio = () => {
   return (
