@@ -4,8 +4,8 @@ import './styles/PreguntasFrecuentes.css';
 
 export const PreguntasFrecuentes = () => {
   return (
-   <div className="megacontainerfaq">
-    <div className="container">
+   <div className="megacontainerFaq">
+    <div className="containerFaqs">
       <h1 className="title">Preguntas Frecuentes</h1>
       <div className="faq">
         <div className="column">
