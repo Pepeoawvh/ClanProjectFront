@@ -1,21 +1,15 @@
-import { useContext } from "react"
-import { clanesContext } from "../context/clanes/clanesContext"
+import { useContext } from "react";
+import { clanesContext } from "../context/clanes/clanesContext";
 
-export const ServicioCuentaIMG = ({nombreCuenta,imagenUrl,_id}) => {
-    const {selectServiceId} = useContext (clanesContext)
-    const selectService = () => {
-        selectServiceId (_id)
-    }
+export const ServicioCuentaIMG = ({ nombreCuenta, imagenUrl, _id }) => {
+  const { selectServiceId } = useContext(clanesContext);
+  const selectService = () => {
+    selectServiceId(_id);
+  };
 
-return(
+  return (
     <div className="servicio" onClick={selectService}>
-        <img src={imagenUrl}/>
-   
-        
+      <img src={imagenUrl} />
     </div>
-
-)
-
-
-
-}
+  );
+};

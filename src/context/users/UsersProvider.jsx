@@ -7,29 +7,32 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 export const UsersProvider = ({ children }) => {
-
   const checkAuth = () => {
     const token = localStorage.getItem("userToken");
     if (token) {
       const decodedToken = jwtDecode(token);
-    return {
-      isAuthenticated: true,
-      user: decodedToken
+      return {
+        isAuthenticated: true,
+        user: decodedToken,
+      };
+    } else {
+      return {
+        isAuthenticated: false,
+        user: null,
+      };
     }
-      } else {
-        return {
-          isAuthenticated: false,
-          user: null
-        };
-      }
-    }
+  };
 
   const initialUserState = {
     isAuthenticated: false,
     user: null,
   };
   const navegar = useNavigate();
-  const [state, dispatch] = useReducer(usersReducer, initialUserState, checkAuth);
+  const [state, dispatch] = useReducer(
+    usersReducer,
+    initialUserState,
+    checkAuth
+  );
 
   const logIn = async (userData) => {
     const url = `${import.meta.env.VITE_BACKENDURL}/users/login`;

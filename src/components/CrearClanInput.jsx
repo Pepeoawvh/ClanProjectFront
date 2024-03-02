@@ -1,11 +1,8 @@
- import { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import "../pages/styles/CrearClan.css";
 import { clanesContext } from "../context/clanes/clanesContext";
 
 export const CrearClanInput = () => {
-
-  
-
   return (
     <>
       <div className="clanCredencialesContainer">
@@ -47,7 +44,6 @@ export const CrearClanInput = () => {
           </div>
           <button className="selectedButton">Crear Clan</button>
         </div>
-      
       </div>
       <div className="clanBackground">
         <div className="clanImgBackground circle"></div>
@@ -55,4 +51,3 @@ export const CrearClanInput = () => {
     </>
   );
 };
- 

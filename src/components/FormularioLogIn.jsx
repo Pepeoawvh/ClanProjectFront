@@ -28,19 +28,19 @@ export const FormularioLogIn = () => {
       await logIn(userData);
       setIsLoading(false);
       setUserData(initialUserData);
-      toast("Inicio de sesion exitoso",{
+      toast("Inicio de sesion exitoso", {
         duration: 2000,
         position: "bottom-right",
-        border: '1px solid black',
-        style: {background: "black",}
+        border: "1px solid black",
+        style: { background: "black" },
       });
       navegar("/");
     } catch (error) {
-      toast(error.message,  {
+      toast(error.message, {
         duration: 100,
         position: "bottom-right",
-        border: '1px solid #dff',
-        style: {background: "black",}
+        border: "1px solid #dff",
+        style: { background: "black" },
       });
       setIsLoading(false);
       setUserData(initialUserData);

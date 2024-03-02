@@ -15,7 +15,7 @@ export const CrearClanMain = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isFormValid, setIsFormValid] = useState(false); // Nuevo estado para verificar si el formulario es válido
   const navegar = useNavigate();
-  
+
   const {
     obtenerServicio,
     isServiceSelected,
@@ -23,9 +23,9 @@ export const CrearClanMain = () => {
     cuposServicio,
     valorServicio,
     selectedClan,
-    registerClan
+    registerClan,
   } = useContext(clanesContext);
-  const {user} = useContext(usersContext)
+  const { user } = useContext(usersContext);
   const onChange = (e) => {
     setRegisterClanData({
       ...registerClanData,
@@ -60,81 +60,82 @@ export const CrearClanMain = () => {
   };
 
   const [selectedButton, setSelectedButton] = useState(null);
- 
+
   const { count, increment, decrement, reset } = useCounter(1, cuposServicio);
   useEffect(() => {
     obtenerServicio();
     reset();
   }, [isServiceSelected]);
 
- // Función para verificar si el formulario es válido y si se ha seleccionado público o privado
-useEffect(() => {
-  setIsFormValid(registerClanData.usuarioCredencialesClan !== "" && registerClanData.contrasenaClan !== "" && selectedButton !== null);
-}, [registerClanData, selectedButton]);
-
+  // Función para verificar si el formulario es válido y si se ha seleccionado público o privado
+  useEffect(() => {
+    setIsFormValid(
+      registerClanData.usuarioCredencialesClan !== "" &&
+        registerClanData.contrasenaClan !== "" &&
+        selectedButton !== null
+    );
+  }, [registerClanData, selectedButton]);
 
   return (
     <>
       <div className="crearClanMain">
-          <span id="counterTitle">¿Cuantos cupos tendrá tu clan?</span>
+        <span id="counterTitle">¿Cuantos cupos tendrá tu clan?</span>
 
-          <div className="crearClanCounter">
-            <button className="counterButton" onClick={decrement}>
-              -
-            </button>
-            <div className="counter">
-              <span id="contador">{parseInt(count)}</span>
-            </div>
-            <button className="counterButton" onClick={increment}>
-              +
-            </button>
+        <div className="crearClanCounter">
+          <button className="counterButton" onClick={decrement}>
+            -
+          </button>
+          <div className="counter">
+            <span id="contador">{parseInt(count)}</span>
           </div>
-          <div className="crearClanTexts">
-            <span id="cupos">
-              {nombreServicio} lo pueden utilizar hasta {cuposServicio}
-            </span>
-            <span id="ganancia">
-              Ahorra por mes: {valorServicio * 0.9 * count} en
-              tu cuenta
-            </span>
-          </div>
-
-          <span className="titles publicarClanTitles">
-            ¿Quieres publicar tu Clan?
+          <button className="counterButton" onClick={increment}>
+            +
+          </button>
+        </div>
+        <div className="crearClanTexts">
+          <span id="cupos">
+            {nombreServicio} lo pueden utilizar hasta {cuposServicio}
           </span>
-          <div className="publicarClanButtonContainer">
-            <div className="publicarClan">
-              <button
-                className={selectedButton === "publico" ? "isSelected" : ""}
-                onClick={() => {
-                  setSelectedButton("publico");
-                  selectedClan("publico");
-                }}
-              >
-                Clan Público
-              </button>
-              <tool-tip role="tooltip">
-                👀 Otros usuarios podrán ver tu clan
-              </tool-tip>
-            </div>
-            <div className="publicarClan">
-              <button
-                className={selectedButton === "privado" ? "isSelected" : ""}
-                onClick={() => {
-                  setSelectedButton("privado");
-                  selectedClan("privado");
-                }}
-              >
-                Clan Privado
-              </button>
-              <tool-tip role="tooltip">
-                👀 Envia el link privado a tus amigos!
-              </tool-tip>
-            </div>
+          <span id="ganancia">
+            Ahorra por mes: {valorServicio * 0.9 * count} en tu cuenta
+          </span>
+        </div>
+
+        <span className="titles publicarClanTitles">
+          ¿Quieres publicar tu Clan?
+        </span>
+        <div className="publicarClanButtonContainer">
+          <div className="publicarClan">
+            <button
+              className={selectedButton === "publico" ? "isSelected" : ""}
+              onClick={() => {
+                setSelectedButton("publico");
+                selectedClan("publico");
+              }}
+            >
+              Clan Público
+            </button>
+            <tool-tip role="tooltip">
+              👀 Otros usuarios podrán ver tu clan
+            </tool-tip>
           </div>
+          <div className="publicarClan">
+            <button
+              className={selectedButton === "privado" ? "isSelected" : ""}
+              onClick={() => {
+                setSelectedButton("privado");
+                selectedClan("privado");
+              }}
+            >
+              Clan Privado
+            </button>
+            <tool-tip role="tooltip">
+              👀 Envia el link privado a tus amigos!
+            </tool-tip>
+          </div>
+        </div>
 
-
-          <form onSubmit={onSubmit}>
+        <form onSubmit={onSubmit}>
           <div className="crearClanCredsContainer">
             <div className="titles">Agrega tus credenciales</div>
             <div className="subTitles">
@@ -177,12 +178,11 @@ useEffect(() => {
                 className="formButton crearClanButton"
                 id="crearClanButton"
                 type="submit"
-                disabled={!isFormValid || isLoading} 
+                disabled={!isFormValid || isLoading}
               >
                 Crear Clan
               </button>
             </div>
-            
           </div>
         </form>
       </div>

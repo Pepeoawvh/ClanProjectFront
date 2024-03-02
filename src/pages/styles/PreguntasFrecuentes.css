@@ -41,7 +41,7 @@
 }
 
 .preguntasFrecuentesImg {
-  background-image: url(../../public/images/Todosclan.png);
+  background-image: url(/images/Todosclan.png);
   height: 100%;
   width: 100%;
   background-repeat: no-repeat;

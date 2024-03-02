@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 export function useCounter(initialValue, cuposMaximos) {
   const [count, setCount] = useState(initialValue);
@@ -19,8 +19,8 @@ export function useCounter(initialValue, cuposMaximos) {
     setCount(newCount);
   }
 
-  function reset () {
-     setCount(initialValue)
+  function reset() {
+    setCount(initialValue);
   }
 
   return { count, increment, decrement, reset };
