@@ -17,11 +17,11 @@ export const UnirseClanNav = () => {
   return (
     <>
       {" "}
-      <div className="crearClanNav">
+      <div className="unirseClanNav">
         <span> Selecciona el servicio al que quieres unirte </span>
 
         {/* <div className="buttonUp"></div> */}
-        <div className="crearClanServicios">
+        <div className="unirseClanServicios">
           {cuentas.map((cuenta) => (
             <ServicioCuentaIMG
               key={cuenta._id}

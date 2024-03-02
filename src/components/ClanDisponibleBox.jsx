@@ -30,7 +30,7 @@ export const ClanDisponibleBox = ({ clan }) => {
       <div className="clanDisponibleBoxTitle">
         <NombreAdmin id={clan.admin} />
         <img className="clanDisponibleBoxImg"></img>
-        <span> Creado el {fechaFormateada} // ${accountInfo?.precio} </span>
+        <span> Creado el {fechaFormateada} ➡️ 💰{accountInfo?.precio} </span>
       </div>
       <div className="clanDisponibleBoxMiddle">
         <button className="buttonClanBox">UNIRME</button>

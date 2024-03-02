@@ -1,8 +1,8 @@
 .clanDisponibleContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.1fr 1fr 1fr;
-  height: 490px;
+  grid-template-rows: auto ;
+  height: fit-content;
   width: 100%;
   align-self: top;
   padding: 20px;
@@ -21,7 +21,7 @@
 .clanDisponibleBox{
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 0.5fr 0.5fr;
+  grid-template-rows: 1fr 0.5fr 0.1fr;
   height: fit-content;
   width: 100%;
   background-color: #7416cc79;
@@ -42,10 +42,12 @@
   grid-template-columns: 1fr 0.5fr;
   grid-template-rows: 1fr 1fr;
   justify-items: center;
+  size: 100%;
 }
 
 .clanBoxTitleText{
-  font-size: 22px;
+  font-size: 16px;
+  font-weight: 600;
 }
 .clanDisponibleBoxMiddle{
   display: grid;

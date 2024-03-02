@@ -19,7 +19,6 @@ export const CrearClanNav = () => {
       {" "}
       <div className="crearClanNav">
         <span> Selecciona la cuenta que quieres compartir </span>
-        <div className="crearClanNavGallery">
         
           <div className="crearClanServicios">
             {cuentas.map((cuenta) => (
@@ -32,7 +31,6 @@ export const CrearClanNav = () => {
             ))}
           </div>
        
-        </div>
       </div>
     </>
   );
