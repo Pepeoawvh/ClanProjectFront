@@ -8,7 +8,13 @@ const detalles = "Tu pago ha sido procesado correctamente.";
 const {user} = useContext(usersContext)
 const addMember = async () => {
 const url =`${import.meta.env.VITE_BACKENDURL}/clan/addmember`
-const {data} = await axios.post (url,{clanId: JSON.parse(localStorage.getItem("clanToJoin")),userId:user._id })
+console.log("clanid: ", JSON.parse(localStorage.getItem("clanToJoin")))
+console.log("userid: ", user._id)
+const {data} = await axios.post (url,{clanId: JSON.parse(localStorage.getItem("clanToJoin")),userId:user._id },{
+  headers:{
+    "authorization":`Token ${JSON.parse(localStorage.getItem("userToken"))}`
+  }
+})
 console.log(data)
 
   }
