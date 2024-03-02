@@ -13,7 +13,9 @@ export const CrearClanMain = () => {
 
   const [registerClanData, setRegisterClanData] = useState(initialClanData);
   const [isLoading, setIsLoading] = useState(false);
+  const [isFormValid, setIsFormValid] = useState(false); // Nuevo estado para verificar si el formulario es válido
   const navegar = useNavigate();
+  
   const {
     obtenerServicio,
     isServiceSelected,
@@ -65,6 +67,12 @@ export const CrearClanMain = () => {
     reset();
   }, [isServiceSelected]);
 
+ // Función para verificar si el formulario es válido y si se ha seleccionado público o privado
+useEffect(() => {
+  setIsFormValid(registerClanData.usuarioCredencialesClan !== "" && registerClanData.contrasenaClan !== "" && selectedButton !== null);
+}, [registerClanData, selectedButton]);
+
+
   return (
     <>
       <div className="crearClanMain">
@@ -75,7 +83,7 @@ export const CrearClanMain = () => {
               -
             </button>
             <div className="counter">
-              <span id="contador">{count}</span>
+              <span id="contador">{parseInt(count)}</span>
             </div>
             <button className="counterButton" onClick={increment}>
               +
@@ -169,7 +177,7 @@ export const CrearClanMain = () => {
                 className="formButton crearClanButton"
                 id="crearClanButton"
                 type="submit"
-                disabled={isLoading} 
+                disabled={!isFormValid || isLoading} 
               >
                 Crear Clan
               </button>

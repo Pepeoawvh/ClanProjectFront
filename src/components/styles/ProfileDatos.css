@@ -178,3 +178,25 @@ overflow: hidden;
   .contain-clan-admin {
     width: 150px;
 }
+
+
+.buttonEditarProfile{
+  width: 131.91px;
+  height: fit-content;
+  padding: 6px;
+  border-radius: 100px;
+  background-color: #322B61;
+
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.476);
+  margin-top: 2px;
+  margin-left: auto; /* Centra el botón horizontalmente */
+  margin-right: auto; /* Centra el botón horizontalmente */
+  align-items: center;
+}
+
+.buttonEditarProfile:hover {
+  background-color: #231e44;
+  color: white;
+  font-weight: 600;
+}
