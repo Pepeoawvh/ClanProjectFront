@@ -17,8 +17,8 @@ export const RegistroInicio = () => {
           <div className="formContainer">
           <button className="regTitle" onClick={toggleForm}>
               {showRegister
-                ? "Ya tengo una cuenta, Iniciar Sesion"
-                : "¿Aun no tienes una cuenta? ¡Registrate!"}
+                ? "Ya tengo una cuenta, Iniciar Sesión"
+                : "¿Aún no tienes una cuenta? ¡Registrate!"}
             </button>
             {showRegister ? <FormularioRegistro /> : <FormularioLogIn />}
 

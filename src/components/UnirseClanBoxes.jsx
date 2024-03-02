@@ -7,6 +7,7 @@ import "./styles/boxes.css";
 import { ClanDisponibleBox } from "./ClanDisponibleBox.jsx";
 /* componente para mostrar cuando se haga click en unirse a un clan y seleccionar la plataforma*/
 export const UnirseClanBoxes = () => {
+
   const [selectedButton, setSelectedButton] = useState(null);
   const [clanesFiltrados, setClanesFiltrados] = useState([])
   const {
@@ -14,7 +15,7 @@ export const UnirseClanBoxes = () => {
     isServiceSelected,
     nombreServicio,
     valorServicio,
-    selectedClan,
+    selectedClan
   } = useContext(clanesContext);
   const { user } = useContext(usersContext);
   
