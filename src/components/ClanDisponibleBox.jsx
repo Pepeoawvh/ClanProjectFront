@@ -1,5 +1,7 @@
+import { initMercadoPago } from "@mercadopago/sdk-react";
 import axios from "axios";
 import { useState, useEffect } from "react";
+
 
 export const ClanDisponibleBox = ({ clan }) => {
   const [accountInfo, setAccountInfo] = useState(null)
@@ -21,6 +23,23 @@ export const ClanDisponibleBox = ({ clan }) => {
       console.error("Error al obtener datos de la cuenta", error);
     }
   };
+
+  initMercadoPago(import.meta.env.VITE_ACCESS_MP_TOKEN);
+  const [preferenceId, setPreferenceId] = useState(null)
+  const obtenerPreferenceId = async () => {
+    console.log("entre a la función")
+    const {data} = await axios.post (`${import.meta.env.VITE_BACKENDURL}/payment/create-Preference` , {clanId: accountInfo.nombreCuenta,
+      precio: accountInfo.precio}, {
+        headers:{
+          "authorization": `Token ${JSON.parse(localStorage.getItem("userToken"))}`
+        }
+      })
+    
+    setPreferenceId (data.id)
+    console.log(data.init_point)
+    window.location.href = data.init_point
+  }
+
   useEffect(() => {
     getAccountInfo();
   }, []);
@@ -33,7 +52,7 @@ export const ClanDisponibleBox = ({ clan }) => {
         <span> Creado el {fechaFormateada} // ${accountInfo?.precio} </span>
       </div>
       <div className="clanDisponibleBoxMiddle">
-        <button className="buttonClanBox">UNIRME</button>
+        <button className="buttonClanBox" onClick={obtenerPreferenceId} >UNIRME</button>
       </div>
       <div className="clanBoxCupos">
         {" "}

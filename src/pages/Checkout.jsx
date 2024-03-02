@@ -3,12 +3,12 @@ import { CheckoutSuscripciones } from "../components/CheckoutSuscripciones"
 import { initMercadoPago, Wallet } from '@mercadopago/sdk-react'
 import axios from "axios";
 import { useEffect, useState } from "react";
-initMercadoPago(import.meta.env.VITE_ACCESS_MP_TOKEN);
+
 
 
 export const Checkout = () => {
 
-  const [preferenceId, setPreferenceId] = useState(null)
+  
 
 
   const createOrder = (data, actions) => {
@@ -28,13 +28,7 @@ export const Checkout = () => {
     const enviarOrden = await actions.order.capture()
     console.log(enviarOrden)
   }
-
-  const obtenerPreferenceId = async () => {
-    const data = await axios.post (`${import.meta.env.VITE_BACKENDURL}/payment/create-Preference` , {clanId,
-      precio})
-    
-    setPreferenceId (data.data.id)
-  }
+  
 
   useEffect (() => {
     obtenerPreferenceId ()
