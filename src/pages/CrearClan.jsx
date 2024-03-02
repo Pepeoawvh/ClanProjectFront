@@ -8,34 +8,26 @@ import { useNavigate } from "react-router-dom";
 import { SeleccionaPlataforma } from "../components/SeleccionaPlataforma";
 
 export const CrearClan = () => {
-  const {isAuth} = useContext (usersContext)
-  const {isServiceSelected} = useContext (clanesContext)
-  const navegar = useNavigate ()
-  console.log(isServiceSelected)
-  useEffect (() => {
-    if (!isAuth){
-      console.log("saliendo")
-      navegar ("/RegistroInicio")
-      
+  const { isAuth } = useContext(usersContext);
+  const { isServiceSelected } = useContext(clanesContext);
+  const navegar = useNavigate();
+  console.log(isServiceSelected);
+  useEffect(() => {
+    if (!isAuth) {
+      console.log("saliendo");
+      navegar("/RegistroInicio");
     }
-
-  }, [isAuth])
+  }, [isAuth]);
 
   return (
     <>
       <div className="crearClanContainer">
-        <CrearClanNav/>
-        {
-          isServiceSelected ? <CrearClanMain/> : <SeleccionaPlataforma/>
-        }
-        
+        <CrearClanNav />
+        {isServiceSelected ? <CrearClanMain /> : <SeleccionaPlataforma />}
       </div>
       <div className="clanBackground">
         <div className="clanImgBackground circle"></div>
       </div>
-
-      
-
     </>
   );
 };
