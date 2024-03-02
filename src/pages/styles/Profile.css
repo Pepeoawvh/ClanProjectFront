@@ -46,7 +46,7 @@
  }
 
  .profileImgBackground {
-  background-image: url(../../public/images/bginix.jpeg);
+  background-image: url(/images/bginix.jpeg);
   height: 120vh; 
   width: 100%;
   background-repeat: no-repeat;
