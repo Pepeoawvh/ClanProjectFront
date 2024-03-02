@@ -70,14 +70,6 @@ export const FormularioRegistro = () => {
           name="correo"
           onChange={onChange}
         />
-        {/* <input
-          className="formItem"
-          type="text"
-          placeholder="Dirección"
-          value={registerData.direccion}
-          name="direccion"
-          onChange={onChange}
-        /> */}
         <input
           className="formItem"
           type="password"
