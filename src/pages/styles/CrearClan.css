@@ -5,16 +5,15 @@
     transition-delay: 1s;
 
 }
-.crearClanMain form{    
+
+.crearClanMain form {
     display: grid;
     grid-template-rows: 0.1fr 0.5fr 1fr 0.1fr 0.1fr;
     justify-items: center;
     animation: fade-in 1s forwards;
     transition-delay: 1s;
-width: fit-content;
+    width: fit-content;
 }
-    
-    
 
 .crearClanContainer {
     display: grid;
@@ -26,13 +25,14 @@ width: fit-content;
 
 .crearClanNav {
     display: grid;
-    grid-template-rows: 0.01fr 0.1fr;
+    grid-template-rows: 0.1fr 0.1fr;
     align-items: center;
     border: solid 3px white;
     border-radius: 20px;
-    grid-gap: 2px;
+    grid-gap: 20px;
     padding: 1px;
-    height: 70vh;
+    height: fit-content;
+    width: fit-content;
     position: static;
     padding: 10px;
 }
@@ -50,31 +50,30 @@ width: fit-content;
     grid-template-rows: 1fr;
 }
 
-.buttonUp {
-    display: grid;
-    height: 70px;
-    width: 70px;
-    background-image: url(../../public/images/upButtonCrearClan.png);
-    justify-self: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
 .crearClanServicios {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     justify-self: center;
     align-items: flex-start;
-    grid-gap: 30px;
-    width: max-content;
-    height: 70%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    grid-gap: 20px;
+    width: fit-content;
+    height: 100%;
+}
+
+
+.crearClanServicios img:hover {
+    transition: 0.5s;
+    width: 75px;
+    height: 75px;
 }
 
 .servicio {
     height: 80px;
     width: 80px;
-    background-color: aquamarine;
+    background-color: rgba(0, 0, 0, 0);
     border-radius: 50%;
     cursor: pointer;
 }
@@ -83,17 +82,6 @@ width: fit-content;
     width: 100%;
     height: 100%;
     border-radius: 50%;
-
-}
-
-.buttonDown {
-    display: grid;
-    height: 70px;
-    width: 70px;
-    background-image: url(../../public/images/downButtonCrearClan.png);
-    justify-self: center;
-    background-repeat: no-repeat;
-    background-size: contain;
 }
 
 #counterTitle {
@@ -137,8 +125,6 @@ width: fit-content;
     margin-top: 30px;
     border-bottom: solid white 5px;
     padding-bottom: 50px;
-    
-
 }
 
 #cupos {
@@ -182,7 +168,6 @@ width: fit-content;
     color: white;
     font-weight: 100;
     margin-bottom: 10px;
-
 }
 
 .publicarClanButtonContainer {
@@ -193,7 +178,6 @@ width: fit-content;
     height: fit-content;
     border-bottom: solid white 5px;
     width: 90%;
-
 }
 
 .publicarClan {
@@ -213,32 +197,13 @@ width: fit-content;
     transition: background-color 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.476);
     margin-bottom: 20px;
-
 }
 
 .publicarClan button:hover {
     background-color: #231e44;
     color: white;
     font-weight: 600;
-
 }
-
-/* .next{
-padding-left: 750px;
-
-}
-
-.next button {
-    width: 271.91px;
-    height: fit-content;
-    padding: 15px;
-    border-radius: 100px;
-    background-color: #322B61;
-  
-    transition: background-color 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.476);
-
-} */
 
 .crearClan span {
     margin-top: 25px;
@@ -260,7 +225,6 @@ padding-left: 750px;
     background-color: #231e44;
     color: white;
     font-weight: 600;
-
 }
 
 .clanImgBackground {
@@ -318,7 +282,6 @@ padding-left: 750px;
     grid-gap: 30px;
     width: 100%;
     height: auto;
-
 }
 
 .inputCrearClan {
@@ -332,7 +295,6 @@ padding-left: 750px;
 
 .inputTitles {
     color: white;
-
 }
 
 .boxDown {
@@ -347,7 +309,6 @@ padding-left: 750px;
     justify-self: right;
     border-radius: 5px;
     padding-left: 5px;
-
 }
 
 .send {
@@ -357,8 +318,6 @@ padding-left: 750px;
     border-radius: 50px;
     width: 50%;
     justify-self: left !important;
-
-
 }
 
 .crearClanSpotiBox button {
@@ -376,14 +335,12 @@ padding-left: 750px;
 }
 
 .crearClanSpotiBox button:hover {
-
     background-color: #231e44;
     color: rgb(255, 255, 255);
     font-weight: 600;
-
 }
 
-.selectedButton button{
+.selectedButton button {
     width: 271.91px;
     height: fit-content;
     padding: 15px;
@@ -392,19 +349,13 @@ padding-left: 750px;
     margin-bottom: 10px;
     transition: background-color 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.476);
- 
-    
-  }
+}
 
-  
-.selectedButton button:hover{
-
+.selectedButton button:hover {
     background-color: #231e44;
     color: rgb(255, 255, 255);
     font-weight: 600;
-
 }
-
 
 .isSelected {
     background-color: #460353 !important;
@@ -420,3 +371,4 @@ padding-left: 750px;
     align-items: center;
     font-size: 45px;
 }
+

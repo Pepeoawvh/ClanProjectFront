@@ -5,7 +5,7 @@
     color: white;
     grid-gap: 30px;
     height: fit-content;
-    
+
 }
 
 .unirseClanTitle {
@@ -13,4 +13,48 @@
     height: 50px;
     text-align: center;
     font-size: 25px;
-  }
+    font-size: 25px;
+}
+
+.unirseClanNav {
+
+    display: grid;
+    grid-template-rows: 0.1fr 0.1fr;
+    align-items: center;
+    border: solid 3px white;
+    border-radius: 20px;
+    grid-gap: 20px;
+    padding: 1px;
+    height: fit-content;
+    width: fit-content;
+    position: static;
+    padding: 10px;
+}
+
+.unirseClanNav span {
+    display: grid;
+    text-align: center;
+    justify-self: center;
+    width: fit-content;
+    margin-top: 1fr;
+}
+
+.unirseClanServicios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-self: center;
+    align-items: flex-start;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    grid-gap: 20px;
+    width: fit-content;
+    height: 100%;
+}
+
+
+.unirseClanServicios img:hover {
+    transition: 0.5s;
+    width: 75px;
+    height: 75px;
+}
