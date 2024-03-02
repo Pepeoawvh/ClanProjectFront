@@ -29,8 +29,7 @@ export const ProfileDatos = () => {
             <li>Nombre: {user.nombreCompleto}</li>
             <li>Correo: {user.correo}</li>
             <li>Rol: {user.rol}</li>
-            <li>Estado de cuenta: {user.estadoCuenta}</li>
-            <li>Último acceso: {user.ultimoAcceso}</li>
+           
             <button className="buttonEditarProfile" onClick={() => setEditing(true)}>Editar</button>
           </ul>
         ) : (
