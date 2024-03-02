@@ -31,7 +31,7 @@ export const ProfileDatos = () => {
             <li>Rol: {user.rol}</li>
             <li>Estado de cuenta: {user.estadoCuenta}</li>
             <li>Último acceso: {user.ultimoAcceso}</li>
-            <button onClick={() => setEditing(true)}>Editar</button>
+            <button className="buttonEditarProfile" onClick={() => setEditing(true)}>Editar</button>
           </ul>
         ) : (
           <form onSubmit={handleFormSubmit}>
