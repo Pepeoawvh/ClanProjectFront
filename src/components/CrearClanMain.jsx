@@ -124,6 +124,8 @@ export const CrearClanMain = () => {
               </tool-tip>
             </div>
           </div>
+
+
           <form onSubmit={onSubmit}>
           <div className="crearClanCredsContainer">
             <div className="titles">Agrega tus credenciales</div>
@@ -167,12 +169,12 @@ export const CrearClanMain = () => {
                 className="formButton crearClanButton"
                 id="crearClanButton"
                 type="submit"
-                disabled={isLoading}
+                disabled={isLoading} 
               >
                 Crear Clan
               </button>
             </div>
-            <span>Preguntas Frecuentes❔</span>
+            
           </div>
         </form>
       </div>

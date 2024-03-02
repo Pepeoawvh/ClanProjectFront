@@ -1,24 +1,24 @@
-import React, { useContext, useState } from 'react'
-import { usersContext } from '../context/users/usersContext'
-import './styles/ProfileDatos.css'
+import React, { useContext, useState } from 'react';
+import { usersContext } from '../context/users/usersContext';
+import './styles/ProfileDatos.css';
 
 export const ProfileDatos = () => {
-  const { user, updateUser } = useContext(usersContext)
-  const [editing, setEditing] = useState(false)
-  const [newUser, setNewUser] = useState(user)
+  const { user, updateUser } = useContext(usersContext);
+  const [editing, setEditing] = useState(false);
+  const [newUser, setNewUser] = useState(user);
 
   const handleInputChange = (e) => {
     setNewUser({
       ...newUser,
       [e.target.name]: e.target.value,
-    })
-  }
+    });
+  };
 
   const handleFormSubmit = (e) => {
-    e.preventDefault()
-    updateUser(newUser)
-    setEditing(false)
-  }
+    e.preventDefault();
+    updateUser(newUser);
+    setEditing(false);
+  };
 
   return (
     <>
@@ -28,9 +28,9 @@ export const ProfileDatos = () => {
           <ul className='containerProfile'>
             <li>Nombre: {user.nombreCompleto}</li>
             <li>Correo: {user.correo}</li>
-            <li>Dirección: {user.direccion}</li>
-            <li>Fecha de nacimiento: {user.fechaNacimiento}</li>
-            {/* <li>Número de Strikes: {user.strikes}</li> */}
+            <li>Rol: {user.rol}</li>
+            <li>Estado de cuenta: {user.estadoCuenta}</li>
+            <li>Último acceso: {user.ultimoAcceso}</li>
             <button onClick={() => setEditing(true)}>Editar</button>
           </ul>
         ) : (
@@ -54,33 +54,7 @@ export const ProfileDatos = () => {
                   onChange={handleInputChange}
                 />
               </li>
-              <li>
-                Dirección:
-                <input
-                  type='text'
-                  name='direccion'
-                  value={newUser.direccion}
-                  onChange={handleInputChange}
-                />
-              </li>
-              <li>
-                Fecha de nacimiento:
-                <input
-                  type='date'
-                  name='fechaNacimiento'
-                  value={newUser.fechaNacimiento}
-                  onChange={handleInputChange}
-                />
-              </li>
-{/*               <li>
-                Número de Strikes:
-                <input
-                  type='number'
-                  name='strikes'
-                  value={newUser.strikes}
-                  onChange={handleInputChange}
-                />
-              </li> */}
+              {/* Agrega más campos de entrada para editar aquí si es necesario */}
               <li className='editProfileButtons'>
                 <button type='submit'>Guardar</button>
                 <button onClick={() => setEditing(false)}>Cancelar</button>
@@ -90,5 +64,5 @@ export const ProfileDatos = () => {
         )}
       </div>
     </>
-  )
-}
+  );
+};
