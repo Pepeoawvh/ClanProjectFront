@@ -3,7 +3,7 @@ import { CheckoutSuscripciones } from "../components/CheckoutSuscripciones"
 import { initMercadoPago, Wallet } from '@mercadopago/sdk-react'
 import axios from "axios";
 import { useEffect, useState } from "react";
-initMercadoPago('TEST-33782fbb-b4ef-4c7e-af6a-ed1b03312916');
+initMercadoPago(import.meta.env.VITE_ACCESS_MP_TOKEN);
 
 
 export const Checkout = () => {
@@ -11,34 +11,12 @@ export const Checkout = () => {
   const [preferenceId, setPreferenceId] = useState(null)
 
 
-
-  const productosGenialesQueEstoyVendiendo = [
-    {
-      id: 1,
-      nombre: "Producto Genial 1",
-      precio: 25,
-      cantidad: 1
-    },
-    {
-      id: 2,
-      nombre: "Producto Genial 2",
-      precio: 75,
-      cantidad: 3
-    },
-    {
-      id: 3,
-      nombre: "Producto Genial 3",
-      precio: 50,
-      cantidad: 4
-    }
-  ]
-
   const createOrder = (data, actions) => {
     return actions.order.create({
       purchase_units: [
         {
           amount: {
-            value: productosGenialesQueEstoyVendiendo.reduce((acc, producto) => acc + producto.precio * producto.cantidad, 0)
+            value: suscripciones.reduce((acc, producto) => acc + producto.precio * producto.cantidad, 0)
           }
         }
       ]
@@ -52,8 +30,9 @@ export const Checkout = () => {
   }
 
   const obtenerPreferenceId = async () => {
-    const data = await axios.post ("http://localhost:8080/create-preference", {})
-    console.log (data)
+    const data = await axios.post (`${import.meta.env.VITE_BACKENDURL}/payment/create-Preference` , {clanId,
+      precio})
+    
     setPreferenceId (data.data.id)
   }
 
@@ -68,7 +47,7 @@ export const Checkout = () => {
 
       <ul>
         {
-          productosGenialesQueEstoyVendiendo.map((producto) => (
+          suscripciones.map((producto) => (
             <CheckoutSuscripciones
               key={producto.id}
               nombre={producto.nombre}
@@ -79,7 +58,7 @@ export const Checkout = () => {
         }
       </ul>
 
-      <h3>Total: $ {productosGenialesQueEstoyVendiendo.reduce((acc, producto) => acc + producto.precio * producto.cantidad, 0)}</h3>
+      <h3>Total: $ {suscripciones.reduce((acc, producto) => acc + producto.precio * producto.cantidad, 0)}</h3>
 
 
       <PayPalButtons
