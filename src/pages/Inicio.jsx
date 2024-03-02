@@ -13,17 +13,17 @@ export const Inicio = () => {
           </div>
           <span className="iniSubTitle"> Cuentas Compartidas </span>
           <span className="iniText">
-            Servicio para compartir y unirse a distintos planes, ahorrando y optimizando el pago de servicios.
+            Comparte y unete a distintos servicios ¡Ahorra y optimiza tus pagos!
           </span>
         </div>
         <div className="iniAction">
           <div className="iniActions">
-            <NavLink to="/UnirseClan"><button>Unirme a una Suscripcion</button></NavLink>
+            <NavLink to="/UnirseClan"><button>Unirme a una Suscripción</button></NavLink>
             <span> ¡Únete a un Clan y ahorra!</span>
           </div>
           <div className="iniActions">
-            <NavLink to="/CrearClan"><button>Compartir mi Suscripcion</button></NavLink>
-            <span> ¡Comparte un Clan y ahorra!</span>
+            <NavLink to="/CrearClan"><button>Compartir mi Suscripción</button></NavLink>
+            <span> ¡Comparte un Clan y economiza!</span>
           </div>
         </div>
       </div>

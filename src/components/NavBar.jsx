@@ -30,7 +30,7 @@ export const Navbar = () => {
 
           <li>
             <NavLink className="navButton" to="/QuienesSomos">
-              Quienes Somos
+              Quiénes Somos
             </NavLink>
             {/* En los Link y NavLink usamos el atributo 'to' para indicar a donde queremos que nos lleve el enlace, en este caso a la ruta '/productos'. */}
           </li>
