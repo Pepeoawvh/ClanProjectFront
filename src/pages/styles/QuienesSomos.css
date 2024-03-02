@@ -39,7 +39,7 @@
 .logoSomos {
     width: 200px;
     height: 200px;
-    background-image: url('../../public/images/LOGO.png');
+    background-image: url(/images/LOGO.png);
     background-size: cover;
     background-position: center;
     margin: 0 auto 20px;
@@ -48,7 +48,7 @@
 .teamPhoto {
     width: 400px;
     height: 300px;
-    background-image: url('../../public/images/equipo.jpeg');
+    background-image: url(/images/equipo.jpeg);
     background-size: cover;
     background-position: center;
     margin: 0 auto 20px;
