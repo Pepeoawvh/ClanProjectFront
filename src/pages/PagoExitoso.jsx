@@ -10,7 +10,7 @@ const addMember = async () => {
 const url =`${import.meta.env.VITE_BACKENDURL}/clan/addmember`
 console.log("clanid: ", JSON.parse(localStorage.getItem("clanToJoin")))
 console.log("userid: ", user._id)
-const {data} = await axios.post (url,{clanId: JSON.parse(localStorage.getItem("clanToJoin")),userId:user._id },{
+const {data} = await axios.patch (url,{clanId: JSON.parse(localStorage.getItem("clanToJoin")),userId:user._id },{
   headers:{
     "authorization":`Token ${JSON.parse(localStorage.getItem("userToken"))}`
   }
