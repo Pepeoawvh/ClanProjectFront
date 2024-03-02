@@ -86,7 +86,7 @@ export const CrearClanMain = () => {
               {nombreServicio} lo pueden utilizar hasta {cuposServicio}
             </span>
             <span id="ganancia">
-              Ahorra por mes: {(valorServicio / cuposServicio) * 0.9 * count} en
+              Ahorra por mes: {valorServicio * 0.9 * count} en
               tu cuenta
             </span>
           </div>
