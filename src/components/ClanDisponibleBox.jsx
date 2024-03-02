@@ -36,7 +36,7 @@ export const ClanDisponibleBox = ({ clan }) => {
       })
     
     setPreferenceId (data.id)
-    localStorage.setItem(JSON.stringify("clanToJoin",clan._id))
+    localStorage.setItem("clanToJoin",JSON.stringify(clan._id))
     console.log(data.init_point)
     window.location.href = data.init_point
   }
