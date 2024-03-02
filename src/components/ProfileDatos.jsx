@@ -1,6 +1,6 @@
-import React, { useContext, useState } from 'react';
-import { usersContext } from '../context/users/usersContext';
-import './styles/ProfileDatos.css';
+import React, { useContext, useState } from "react";
+import { usersContext } from "../context/users/usersContext";
+import "./styles/ProfileDatos.css";
 
 export const ProfileDatos = () => {
   const { user, updateUser } = useContext(usersContext);
@@ -22,24 +22,29 @@ export const ProfileDatos = () => {
 
   return (
     <>
-      <div className='profileDatos'>
+      <div className="profileDatos">
         <h3>¡Hola {user.username}!</h3>
         {!editing ? (
-          <ul className='containerProfile'>
+          <ul className="containerProfile">
             <li>Nombre: {user.nombreCompleto}</li>
             <li>Correo: {user.correo}</li>
             <li>Rol: {user.rol}</li>
-           
-            <button className="buttonEditarProfile" onClick={() => setEditing(true)}>Editar</button>
+
+            <button
+              className="buttonEditarProfile"
+              onClick={() => setEditing(true)}
+            >
+              Editar
+            </button>
           </ul>
         ) : (
           <form onSubmit={handleFormSubmit}>
-            <ul className='containerProfileForm'>
+            <ul className="containerProfileForm">
               <li>
                 Nombre:
                 <input
-                  type='text'
-                  name='nombreCompleto'
+                  type="text"
+                  name="nombreCompleto"
                   value={newUser.nombreCompleto}
                   onChange={handleInputChange}
                 />
@@ -47,15 +52,15 @@ export const ProfileDatos = () => {
               <li>
                 Correo:
                 <input
-                  type='email'
-                  name='correo'
+                  type="email"
+                  name="correo"
                   value={newUser.correo}
                   onChange={handleInputChange}
                 />
               </li>
               {/* Agrega más campos de entrada para editar aquí si es necesario */}
-              <li className='editProfileButtons'>
-                <button type='submit'>Guardar</button>
+              <li className="editProfileButtons">
+                <button type="submit">Guardar</button>
                 <button onClick={() => setEditing(false)}>Cancelar</button>
               </li>
             </ul>

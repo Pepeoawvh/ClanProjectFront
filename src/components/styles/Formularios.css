@@ -15,20 +15,20 @@
   justify-self: center;
 }
 
-tool-tip{
-position: absolute;
-z-index: 2;
-pointer-events: none;
-user-select: none;
+tool-tip {
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+  user-select: none;
 
-box-shadow: 0 0 0px #000000;
-padding: .8rem 1rem;
-font-size: 14px;
-top: 45%;
-width: 300px;
+  box-shadow: 0 0 0px #000000;
+  padding: .8rem 1rem;
+  font-size: 14px;
+  top: 45%;
+  width: 300px;
 
-opacity: 0;
-transition: opacity .3s ease;
+  opacity: 0;
+  transition: opacity .3s ease;
 
 }
 
@@ -61,7 +61,7 @@ input:focus {
   justify-items: center;
   background-color: #f4dfe700;
   width: 100vw;
-  height: 100vh;
+  height: 70vh;
   align-self: center;
   justify-self: center;
   grid-gap: 10px;
@@ -120,14 +120,15 @@ input:focus {
 
 .formButton {
   background-color: #322B61 !important;
-  margin: 0 auto; /* Establecer los márgenes laterales automáticamente */
+  margin: 0 auto;
+  /* Establecer los márgenes laterales automáticamente */
   display: block;
 }
 
 .formButton:hover {
-  background-color: #231e44!important;
-    color: white;
-    font-weight: 600;
+  background-color: #231e44 !important;
+  color: white;
+  font-weight: 600;
 
 
 }

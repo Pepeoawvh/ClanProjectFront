@@ -13,9 +13,9 @@ export const clanesReducer = (state, action) => {
       return { ...state, tipoDeClan: action.payload };
 
     case "ESTABLECERADMIN":
-      return { ...state, admin: action.payload };    
-      case "LIMPIARCLANES":
-      return {... action.payload };
+      return { ...state, admin: action.payload };
+    case "LIMPIARCLANES":
+      return { ...action.payload };
     default:
       return { ...state };
   }

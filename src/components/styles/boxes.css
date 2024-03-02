@@ -1,7 +1,7 @@
 .clanDisponibleContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto ;
+  grid-template-rows: auto;
   height: fit-content;
   width: 100%;
   align-self: top;
@@ -18,7 +18,7 @@
   color: white;
 }
 
-.clanDisponibleBox{
+.clanDisponibleBox {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 0.5fr 0.1fr;
@@ -37,7 +37,7 @@
   transition-delay: 2s;
 }
 
-.clanDisponibleBoxTitle{
+.clanDisponibleBoxTitle {
   display: grid;
   grid-template-columns: 1fr 0.5fr;
   grid-template-rows: 1fr 1fr;
@@ -45,11 +45,12 @@
   size: 100%;
 }
 
-.clanBoxTitleText{
+.clanBoxTitleText {
   font-size: 16px;
   font-weight: 600;
 }
-.clanDisponibleBoxMiddle{
+
+.clanDisponibleBoxMiddle {
   display: grid;
   height: 55px;
   grid-template-columns: 1fr;
@@ -57,7 +58,8 @@
   justify-content: center;
 
 }
-.buttonClanBox{
+
+.buttonClanBox {
   width: 271.91px;
   height: fit-content;
   padding: 15px;
@@ -66,19 +68,19 @@
   margin-bottom: 10px;
   transition: background-color 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.476);
-  
+
 }
 
-.buttonClanBox:hover{
+.buttonClanBox:hover {
   background-color: #231e44;
-    color: white;
-    font-weight: 600;
+  color: white;
+  font-weight: 600;
 
-    
+
 }
 
 
-.clanDisponibleBoxImg{
+.clanDisponibleBoxImg {
   display: grid;
   grid-row: span 2;
   width: 55px;
@@ -87,22 +89,22 @@
   border: solid white 1px;
   border-radius: 15px;
 }
-.clanBoxCupos{
+
+.clanBoxCupos {
   display: grid;
   justify-self: center;
 }
 
 @media screen and (max-width: 768px) {
   .clanDisponibleContainer {
-      padding: 10px;
+    padding: 10px;
   }
 
   .clanDisponibleBox {
-      padding: 10px;
+    padding: 10px;
   }
 
   .clanDisponibleBoxTitle {
-      grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
   }
 }
-  

@@ -34,8 +34,8 @@ export const FormularioRegistro = () => {
       toast("Registro exitoso, Bienvenido!", {
         duration: 2000,
         position: "bottom-right",
-        border: '1px solid black',
-        style: {background: "black",}
+        border: "1px solid black",
+        style: { background: "black" },
       });
       navegar("/");
     } catch (error) {
@@ -45,9 +45,9 @@ export const FormularioRegistro = () => {
       toast("Ups, algo salió mal, inténtalo nuevamente!", {
         duration: 2000,
         position: "bottom-right",
-        border: '1px solid black',
-        style: {background: "black",}
-      })
+        border: "1px solid black",
+        style: { background: "black" },
+      });
     }
   };
 

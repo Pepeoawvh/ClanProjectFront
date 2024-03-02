@@ -19,18 +19,17 @@ export const CrearClanNav = () => {
       {" "}
       <div className="crearClanNav">
         <span> Selecciona la cuenta que quieres compartir </span>
-        
-          <div className="crearClanServicios">
-            {cuentas.map((cuenta) => (
-              <ServicioCuentaIMG
-                key={cuenta._id}
-                nombreCuenta={cuenta.nombreCuenta}
-                imagenUrl={cuenta.imagenUrl}
-                _id={cuenta._id}
-              />
-            ))}
-          </div>
-       
+
+        <div className="crearClanServicios">
+          {cuentas.map((cuenta) => (
+            <ServicioCuentaIMG
+              key={cuenta._id}
+              nombreCuenta={cuenta.nombreCuenta}
+              imagenUrl={cuenta.imagenUrl}
+              _id={cuenta._id}
+            />
+          ))}
+        </div>
       </div>
     </>
   );

@@ -231,7 +231,7 @@
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr;
-    background-image: url(images/crearClan.jpg);
+    background-image: url(/images/crearClan.jpg);
     height: 100%;
     width: 100%;
     background-repeat: no-repeat;
@@ -371,4 +371,3 @@
     align-items: center;
     font-size: 45px;
 }
-
