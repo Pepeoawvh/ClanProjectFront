@@ -12,7 +12,7 @@ export const QueSonLosClanes = () => {
       <p>Un clan es un espacio donde múltiples usuarios pueden compartir sus cuentas de suscripción a cambio de una contribución justa. Esta contribución retribuye al usuario que proporciona su cuenta para el beneficio del clan.</p>
     </div>
     <div className="image">
-      <div className='preguntasFrecuentesImg'> </div>
+      <div className='queSonLosClanesImg'> </div>
     </div>
   </div>
   <div className="lists-container">

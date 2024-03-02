@@ -14,16 +14,23 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: url(../../public/images/bgquees.png);
+    background-image: url(public/images/bgquees.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     z-index: 1;
     padding: 200px;
     transition-delay: 4s;
-    margin-top: -190px;
 }
-
+.queSonLosClanesImg{
+    display: grid;
+    width: 250px;
+    height: 250px;
+    background-image: url(public/images/Todosclan.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
 .content {
     display: flex;
     flex-direction: row;
