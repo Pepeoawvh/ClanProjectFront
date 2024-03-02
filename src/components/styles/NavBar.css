@@ -66,11 +66,6 @@ nav ul {
   transition: 0.5s;
 }
 
-.navRegistro:hover {
- 
-  color: #ffffff;
-  transition: 20s;
-}
 .navRegistro a{
   text-decoration: underline 1px;
 }
@@ -80,7 +75,7 @@ nav ul {
   transition: 0.5s;
   font-weight: bold;
   margin-left: 10px;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 @keyframes fade-in {
@@ -96,8 +91,7 @@ nav ul {
 .navButton.active {
   color: #ffffff;
   font-weight: 500;
-  background-color: rgb(32, 0, 70);
-  /* Color de fondo */
+
 }
 
 .logOut.active {
@@ -142,7 +136,7 @@ padding-right: 10PX;
 .logo {
   width: 80px;
   height: 80px;
-  background-image: url(../../public/images/LOGO.png);
+  background-image: url(public/images/LOGO.png);
   background-repeat: no-repeat;
   background-size: contain;
   justify-self: right;
@@ -188,5 +182,5 @@ padding-right: 10PX;
 
 .navButton.active,
 .logOut.active {
-  background-color: #322B61;
+  background-color: #241b60;
 }

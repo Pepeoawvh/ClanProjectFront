@@ -1,6 +1,5 @@
-.megacontainerfaq {
-  display: flex;
-  flex-direction: column;
+.megacontainerFaq {
+  display: grid;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -9,23 +8,24 @@
   background-position: center;
   background-size: cover;
   z-index: 1;
-  padding: 200px;
   transition-delay: 4s;
-  margin-top: -190px;  
 }
 
 
-.container {
+.containerFaqs {
+  display: grid;
+  grid-template-rows: 0.2fr 1fr;
   text-align: center;
   width: 90%;
-  max-width: 800px;
+  max-width: fit-content;
   margin: 0 auto;
   border: 2px solid #ccc;
   border-radius: 12px;
   padding: 20px;
-  box-sizing: border-box;
-  background-image: url(images/bgquees.png);
-  background-size: cover;   animation: fade-in 2s forwards;
+  background-size: cover;
+  animation: fade-in 2s forwards;
+
+  margin-bottom: 40px;
 }
 
 .title {
@@ -40,23 +40,23 @@
   justify-content: space-between;
 }
 
-.preguntasFrecuentesImg{
+.preguntasFrecuentesImg {
   background-image: url(../../public/images/Todosclan.png);
   height: 100%;
   width: 100%;
   background-repeat: no-repeat;
 }
+
 .column {
   flex: 1;
 }
 
 .question {
-  margin: 10px; 
-  background-color: rgba(127, 127, 127, 0.8);
+  margin: 10px;
+  background-color: rgba(127, 127, 127, 0.208);
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
- 
 }
 
 .question h2 {
