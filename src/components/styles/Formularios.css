@@ -17,16 +17,14 @@
 
 tool-tip{
 position: absolute;
-z-index: 1;
+z-index: 2;
 pointer-events: none;
 user-select: none;
 
 box-shadow: 0 0 0px #000000;
-padding: .5rem 1rem;
+padding: .8rem 1rem;
 font-size: 14px;
-border-radius: 8px;
-top: 40%;
-left: -5%;
+top: 45%;
 width: 300px;
 
 opacity: 0;
@@ -121,5 +119,15 @@ input:focus {
 }
 
 .formButton {
-  background-color: rgba(215, 7, 194, 0.242) !important;
+  background-color: #322B61 !important;
+  margin: 0 auto; /* Establecer los márgenes laterales automáticamente */
+  display: block;
+}
+
+.formButton:hover {
+  background-color: #231e44!important;
+    color: white;
+    font-weight: 600;
+
+
 }

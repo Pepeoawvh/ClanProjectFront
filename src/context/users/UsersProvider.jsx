@@ -7,12 +7,29 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 export const UsersProvider = ({ children }) => {
+
+  const checkAuth = () => {
+    const token = localStorage.getItem("userToken");
+    if (token) {
+      const decodedToken = jwtDecode(token);
+    return {
+      isAuthenticated: true,
+      user: decodedToken
+    }
+      } else {
+        return {
+          isAuthenticated: false,
+          user: null
+        };
+      }
+    }
+
   const initialUserState = {
     isAuthenticated: false,
     user: null,
   };
   const navegar = useNavigate();
-  const [state, dispatch] = useReducer(usersReducer, initialUserState);
+  const [state, dispatch] = useReducer(usersReducer, initialUserState, checkAuth);
 
   const logIn = async (userData) => {
     const url = `${import.meta.env.VITE_BACKENDURL}/users/login`;
@@ -21,11 +38,14 @@ export const UsersProvider = ({ children }) => {
       localStorage.setItem("userToken", JSON.stringify(data.accessToken));
       console.log(data);
       const user = jwtDecode(data.accessToken);
+      const expirationTime = user.exp * 1000;
+      localStorage.setItem("tokenExpiration", expirationTime);
       console.log(user);
       dispatch({
         type: "LOGIN/REGISTER",
         payload: user,
       });
+      navegar("/");
     } catch (error) {
       console.error(error);
       throw new Error("Error al iniciar Sesión");
@@ -33,6 +53,7 @@ export const UsersProvider = ({ children }) => {
   };
   const logOut = () => {
     localStorage.removeItem("userToken");
+    localStorage.removeItem("tokenExpiration");
     dispatch({
       type: "LOGOUT",
     });
@@ -84,6 +105,7 @@ export const UsersProvider = ({ children }) => {
         logOut,
         register,
         updateUser,
+        checkAuth,
         isAuth: state.isAuthenticated,
         user: state.user,
       }}

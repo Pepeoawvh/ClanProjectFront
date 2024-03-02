@@ -131,12 +131,13 @@ width: fit-content;
 
 .crearClanTexts {
     display: grid;
-    width: 60vw;
+    width: 90%;
     grid-template-rows: 0.2fr 0.5fr;
     justify-items: center;
     margin-top: 30px;
     border-bottom: solid white 5px;
     padding-bottom: 50px;
+    
 
 }
 
@@ -190,6 +191,8 @@ width: fit-content;
     grid-gap: 30px;
     align-items: center;
     height: fit-content;
+    border-bottom: solid white 5px;
+    width: 90%;
 
 }
 
@@ -242,7 +245,22 @@ padding-left: 750px;
 }
 
 .crearClanButton {
+    width: 271.91px;
+    height: fit-content;
+    padding: 15px;
     border-radius: 100px;
+    background-color: #322B61;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.476);
+    margin-bottom: 20px;
+}
+
+.crearClanButton:hover {
+    background-color: #231e44;
+    color: white;
+    font-weight: 600;
+
 }
 
 .clanImgBackground {
@@ -374,6 +392,7 @@ padding-left: 750px;
     margin-bottom: 10px;
     transition: background-color 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.476);
+ 
     
   }
 
@@ -389,6 +408,8 @@ padding-left: 750px;
 
 .isSelected {
     background-color: #460353 !important;
+    border: 2px solid white;
+    font-weight: bold;
 }
 
 .seleccionaPlataformaTitle {
