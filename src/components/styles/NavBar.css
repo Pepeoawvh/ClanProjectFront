@@ -79,8 +79,6 @@ nav ul {
   color: #f48906;
   transition: 0.5s;
   font-weight: bold;
-  background-color: #131024;
-  /* Color de fondo */
   margin-left: 10px;
   font-size: 17px;
 }
@@ -133,11 +131,10 @@ nav ul {
   transition: 0.5s;
   font-weight: bold;
   background-color: #322B61;
-  /* Color de fondo */
 padding: 4Px;
 padding-left: 10PX;
 padding-right: 10PX;
-  /* border: solid white 1px; */
+
   border-radius: 10px;
 }
 
