@@ -155,7 +155,17 @@
   
 
   .imagen-clan-admin {
-    max-width: 100%;
-    height: auto;
+    max-width: 20%;
+    margin: 0 auto; /* Establecer los márgenes laterales automáticamente */
+    display: block;
   }
   
+  .nombre-clan-admin{
+font-size: 20px;
+max-width: 100%;
+overflow: hidden;
+  }
+
+  .contain-clan-admin {
+    width: 150px;
+}
