@@ -40,6 +40,12 @@
   justify-content: space-between;
 }
 
+.preguntasFrecuentesImg{
+  background-image: url(../../public/images/Todosclan.png);
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+}
 .column {
   flex: 1;
 }
