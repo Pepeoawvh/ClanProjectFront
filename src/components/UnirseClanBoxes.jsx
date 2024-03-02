@@ -5,6 +5,7 @@ import { clanesContext } from "../context/clanes/clanesContext.js";
 import "./styles/boxes.css";
 /* componente para mostrar cuando se haga click en unirse a un clan y seleccionar la plataforma*/
 export const UnirseClanBoxes = () => {
+
   const [selectedButton, setSelectedButton] = useState(null);
   const {
     obtenerServicio,
@@ -12,7 +13,7 @@ export const UnirseClanBoxes = () => {
     nombreServicio,
     cuposServicio,
     valorServicio,
-    selectedClan,
+    selectedClan
   } = useContext(clanesContext);
   
   const { count, increment, decrement, reset } = useCounter(1, cuposServicio);
@@ -28,7 +29,7 @@ export const UnirseClanBoxes = () => {
       </span>
       <div className="clanDisponibleBox">
         <div className="clanDisponibleBoxTitle">
-          <span className="clanBoxTitleText">Clan de %Admin%</span>
+          <span className="clanBoxTitleText">Clan de </span>
           <img className="clanDisponibleBoxImg"></img>
           <span> %tiempo% activo / %Verificado%</span>
         </div>
