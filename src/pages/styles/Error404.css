@@ -1,0 +1,30 @@
+.mainContainer404{
+    display: grid;
+}
+.error404{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    font-size: 40px;
+    border: solid 3px #7316CC;
+    width: fit-content;
+    padding: 30px;
+    justify-self: center;
+    opacity: 0;
+    animation: fade-in 2s forwards;
+    transition-delay: 2s;
+    border-radius: 15px;
+
+}
+.volver{
+    display: grid;
+    justify-self: center;
+    padding: 10px 20px;
+    background-color: #4a0031;
+    border-radius: 15px;
+}
+
+.volver:hover{
+    background-color: #950680;
+    transition: background-color 0.3s ease;
+    border-radius: 15px;
+}

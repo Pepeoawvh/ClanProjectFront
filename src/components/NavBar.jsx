@@ -1,20 +1,41 @@
 import { NavLink, Link } from "react-router-dom"; // Importamos los componentes <NavLink /> y <Link /> desde la carpeta node_modules
 import "./styles/NavBar.css";
-import { useContext } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { usersContext } from "../context/users/usersContext";
 
 export const Navbar = () => {
   const { isAuth, user, logOut } = useContext(usersContext);
+  const [isOpen, setIsOpen] = useState(false);
+  const navRef = useRef(null);
+
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("click", handleOutsideClick);
+
+    return () => {
+      document.removeEventListener("click", handleOutsideClick);
+    };
+  }, []);
 
   return (
     <header>
-      <nav>
+      <nav ref={navRef}>
         <NavLink to="/">
+          {" "}
           <div className="logo"></div>
-          {/* El componente <Link /> es un componente que nos permite crear enlaces dentro de nuestra aplicación. */}
         </NavLink>
-
-        <ul>
+        <ul className={`navItem ${isOpen && "open"}`}>
+          <li>
+            <NavLink className="navButton" to="/">
+              Inicio
+              {/* El componente <Link /> es un componente que nos permite crear enlaces dentro de nuestra aplicación. */}
+            </NavLink>
+          </li>
           <li>
             <NavLink className="navButton" to="/QueSonLosClanes">
               ¿Qué son los Clanes?
@@ -35,21 +56,37 @@ export const Navbar = () => {
             {/* En los Link y NavLink usamos el atributo 'to' para indicar a donde queremos que nos lleve el enlace, en este caso a la ruta '/productos'. */}
           </li>
 
-          <li className="navRegistro">
+          <li>
             {isAuth ? (
               <>
-                Bienvenido <NavLink to="/Profile"> {user.username}</NavLink>
-                <button className="logOut" id="logOutButton" onClick={logOut}>
+                Bienvenido{" "}
+                <NavLink className="navButton navItem" to="/Profile">
+                  {" "}
+                  {user.username}
+                </NavLink>
+                <button
+                  className="logOut navItem"
+                  id="logOutButton"
+                  onClick={logOut}
+                >
                   Salir
                 </button>
               </>
             ) : (
-              <NavLink className="navButton" to="/RegistroInicio">
-                Registro/Inicio
+              <NavLink className="navButton navItem" to="/RegistroInicio">
+                Registro/LogIn
               </NavLink>
             )}
           </li>
         </ul>
+        <div
+          className={`navToggle ${isOpen && "open"}`}
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </nav>
     </header>
   );

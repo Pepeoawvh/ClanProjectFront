@@ -13,6 +13,7 @@
     text-align: center;
     animation: fade-in 2s forwards;
     transition-delay: 4s;
+    justify-items: center;
 }
 
 .iniTitle span {
@@ -151,4 +152,110 @@
     background-repeat: no-repeat;
     background-size: contain;
     margin-top: -30px;
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        height: 100vh;
+    }
+
+    .iniImgBackground {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        background-image: url(/images/bgini.jpeg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin-top: -70px;
+
+    }
+
+    .iniBackground {
+        height: 100vh;
+        width: 100vw;
+        background-color: #02031d;
+        animation: fade-in 1s forwards;
+        transition-delay: 1s;
+        position: absolute;
+        top: 2cm;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -2;
+        overflow: hidden;
+
+    }
+
+    .iniDarkLeft {
+        height: 100vh;
+        width: 50vw;
+        background-color: rgba(1, 1, 6, 0.256);
+        opacity: 0;
+        animation: fade-in 1s forwards;
+        transition-delay: 1s;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }
+
+    .iniContainer {
+        display: grid;
+        grid-template-rows: 0.5fr 1fr;
+        width: fit-content;
+        height: fit-content;
+        margin-top: 50px;
+        grid-gap: 10px;
+        align-items: center;
+        align-self: center;
+    }
+
+    .iniTitle {
+        display: grid;
+        grid-template-rows: 0.5fr 0.1fr 0.5fr;
+        height: 200px;
+    }
+
+    .logoContainer {
+        display: grid;
+        height: 100px;
+        width: 100px;
+        justify-items: center;
+    }
+
+    .iniSubTitle {
+        font-size: 20px;
+    }
+
+    .iniText {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .iniAction {
+        display: grid;
+        height: fit-content;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.1fr;
+        width: 100%;
+        justify-items: center;
+        grid-gap: 10px;
+        margin-right: 15px;
+        margin-top: 3hw;
+
+    }
+
+    .iniAction button {
+        width: 100%;
+        margin-right: 10;
+    }
+
+    .iniAction a {
+        display: grid;
+        grid-template-rows: 1fr 0.8fr;
+    }
 }

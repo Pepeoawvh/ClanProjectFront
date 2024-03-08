@@ -3,7 +3,7 @@ import "./styles/Pagos.css";
 import axios from 'axios';
 import { usersContext } from '../context/users/usersContext';
 
-const PagoExitoso = () => {
+export const PagoExitoso = () => {
 const detalles = "Tu pago ha sido procesado correctamente.";
 const {user} = useContext(usersContext)
 const addMember = async () => {
@@ -42,4 +42,3 @@ addMember()
   );
 };
 
-export default PagoExitoso;

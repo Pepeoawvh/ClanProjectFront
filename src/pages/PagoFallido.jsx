@@ -1,7 +1,7 @@
 import React from 'react';
 import "./styles/Pagos.css";
 
-const PagoFallido = () => {
+export const PagoFallido = () => {
   const detalles = "Tu pago ha sido procesado correctamente.";
 
   return (
@@ -23,5 +23,3 @@ const PagoFallido = () => {
   
   );
 };
-
-export default PagoFallido;
