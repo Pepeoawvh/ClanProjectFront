@@ -60,7 +60,7 @@ export const Navbar = () => {
             {isAuth ? (
               <>
                 Bienvenido{" "}
-                <NavLink className="navButton navItem" to="/Profile">
+                <NavLink className="navButton" to="/Profile">
                   {" "}
                   {user.username}
                 </NavLink>
@@ -73,7 +73,7 @@ export const Navbar = () => {
                 </button>
               </>
             ) : (
-              <NavLink className="navButton navItem" to="/RegistroInicio">
+              <NavLink className="navButton" to="/RegistroInicio">
                 Registro/LogIn
               </NavLink>
             )}
