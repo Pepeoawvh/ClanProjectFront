@@ -4,7 +4,7 @@
 .error404{
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
-    font-size: 40px;
+    font-size: 20px;
     border: solid 3px #7316CC;
     width: fit-content;
     padding: 30px;
@@ -24,7 +24,7 @@
 }
 
 .volver:hover{
-    background-color: #950680;
+    background-color: #500044;
     transition: background-color 0.3s ease;
     border-radius: 15px;
 }

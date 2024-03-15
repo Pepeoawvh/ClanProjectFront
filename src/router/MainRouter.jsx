@@ -11,6 +11,10 @@ import { NotFound } from "../pages/NotFound404";
 import { PagoExitoso } from "../pages/PagoExitoso";
 import { PagoFallido } from "../pages/PagoFallido";
 import { PagoPendiente } from "../pages/PagoPendiente";
+import { TerminosYCondiciones } from "../pages/TerminosYCondiciones";
+import { BasesLegales } from "../pages/BasesLegales";
+import { PoliticasDePrivacidad } from "../pages/PoliticasDePrivacidad";
+
 
 export const MainRouter = () => {
   return (
@@ -27,6 +31,9 @@ export const MainRouter = () => {
       <Route exact path="/UnirseClan" element={<UnirseClan />} />
       <Route exact path="/Profile" element={<Profile />} />
       <Route exact path="/*" element={<NotFound />} />
+      <Route exact path="/TerminosYCondiciones" element={<TerminosYCondiciones />} />
+      <Route exact path="/PoliticasDePrivacidad" element={<PoliticasDePrivacidad />} />
+      <Route exact path="/BasesLegales" element={<BasesLegales />} />
     </Routes>
   );
 };

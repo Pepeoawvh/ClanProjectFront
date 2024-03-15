@@ -59,8 +59,9 @@ export const Navbar = () => {
           <li>
             {isAuth ? (
               <>
-                Bienvenido{" "}
+            
                 <NavLink className="navButton" to="/Profile">
+                Bienvenido{" "}
                   {" "}
                   {user.username}
                 </NavLink>
