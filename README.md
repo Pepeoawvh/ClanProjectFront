@@ -1,6 +1,6 @@
 # Clan: Comparte o recibe cuentas de servicios de suscripción
 
-ClanS es una plataforma web que te permite compartir o recibir cuentas de servicios de suscripción, como Spotify, Netflix, Disney+ y muchos más. Con Clan, puedes ahorrar dinero y acceder a servicios que no puedes costear, de una forma fácil y segura. Solo tienes que registrarte, crear o unirte a un clan, compartir tus credenciales y recibir el pago de los cupos restantes. O si prefieres, puedes buscar un clan que ofrezca el servicio que quieres y pagar una fracción del precio original. Clan se encarga de proteger tus datos y de facilitar el proceso de pago.
+Clan es una plataforma web que te permite compartir o recibir cuentas de servicios de suscripción, como Spotify, Netflix, Disney+ y muchos más. Con Clan, puedes ahorrar dinero y acceder a servicios que no puedes costear, de una forma fácil y segura. Solo tienes que registrarte, crear o unirte a un clan, compartir tus credenciales y recibir el pago de los cupos restantes. O si prefieres, puedes buscar un clan que ofrezca el servicio que quieres y pagar una fracción del precio original. Clan se encarga de proteger tus datos y de facilitar el proceso de pago.
 
 ![Clan](https://devclanproject.netlify.app)
 
