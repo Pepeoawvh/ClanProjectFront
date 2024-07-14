@@ -1,3 +1,3 @@
 import { createContext } from "react";
 
-export const clanesContext = createContext()
+export const clanesContext = createContext();

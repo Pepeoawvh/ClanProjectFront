@@ -1,0 +1,86 @@
+body {
+    color: white;
+    font-family: Montserrat;
+    animation: fade-in 2s forwards;
+}
+
+.clanes-page {
+width: fit-content;
+    background-image: url(/images/bgquees.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.queSonLosClanesImg{
+    display: grid;
+    width: 250px;
+    height: 250px;
+    background-image: url(/images/Todosclan.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+.content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+    transition-delay: 4s;
+    animation: fade-in 1s forwards;
+}
+
+.text {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.text h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.text p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.image img {
+    width: 300px;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.lists-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.list {
+    margin-top: 20px;
+    text-align: left;
+    margin-right: 160px;
+    margin-left: 80px;
+    animation: fade-in 2s forwards;
+}
+
+.list:last-child {
+    margin-right: 10;
+}
+
+.list h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.list ol {
+    list-style-type: decimal;
+    padding-left: 8px;
+}
+
+.list ol li {
+    font-size: 16px;
+    margin-bottom: 5px;
+}

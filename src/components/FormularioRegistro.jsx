@@ -2,23 +2,21 @@ import React, { useState } from "react";
 import { useContext } from "react";
 import { usersContext } from "../context/users/usersContext";
 import { useNavigate } from "react-router-dom";
-
-import "./styles/Formularios.css";
-import axios from "axios";
 import { toast } from "react-toastify";
 
-export const FormularioRegistro = () => {
+import "./styles/Formularios.css";
 
+export const FormularioRegistro = () => {
   const initialRegisterData = {
     nombreCompleto: "",
     correo: "",
     contrasena: "",
+    confirmarContrasena: "", // Estado adicional para la confirmación de la contraseña
   };
-  const {register} = useContext(usersContext);
+  const { register } = useContext(usersContext);
   const [registerData, setRegisterData] = useState(initialRegisterData);
   const [isLoading, setIsLoading] = useState(false);
   const navegar = useNavigate();
-
 
   const onChange = (e) => {
     setRegisterData({
@@ -29,24 +27,45 @@ export const FormularioRegistro = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
+    // Verificar si las contraseñas coinciden
+    if (registerData.contrasena !== registerData.confirmarContrasena) {
+      toast("Las contraseñas no coinciden", {
+        duration: 2000,
+        position: "bottom-right",
+        style: { background: "red" },
+      });
+      return;
+    }
     setIsLoading(true);
     try {
-     await register(registerData)
+      await register({
+        nombreCompleto: registerData.nombreCompleto,
+        correo: registerData.correo,
+        contrasena: registerData.contrasena,
+      });
       setIsLoading(false);
       setRegisterData(initialRegisterData);
-      toast("Registro exitoso, Bienvenido!");
-      navegar('/')
+      toast("Registro exitoso, Bienvenido!", {
+        duration: 2000,
+        position: "bottom-right",
+        style: { background: "black" },
+      });
+      navegar("/");
     } catch (error) {
       console.log(error);
       setIsLoading(false);
       setRegisterData(initialRegisterData);
+      toast("Ups, algo salió mal, inténtalo nuevamente!", {
+        duration: 2000,
+        position: "bottom-right",
+        style: { background: "black" },
+      });
     }
   };
 
   return (
     <form className="formBanner" onSubmit={onSubmit}>
-
-      <div className="formReg" id="formReg">
+      <div className="formReg gap-6" id="formReg">
         <input
           className="formItem"
           type="text"
@@ -54,8 +73,7 @@ export const FormularioRegistro = () => {
           value={registerData.nombreCompleto}
           name="nombreCompleto"
           onChange={onChange}
-        />{" "}
-        {/**nombreCompleto */}
+        />
         <input
           className="formItem"
           type="email"
@@ -63,8 +81,7 @@ export const FormularioRegistro = () => {
           value={registerData.correo}
           name="correo"
           onChange={onChange}
-        />{" "}
-        {/**correo */}
+        />
         <input
           className="formItem"
           type="password"
@@ -72,22 +89,25 @@ export const FormularioRegistro = () => {
           value={registerData.contrasena}
           name="contrasena"
           onChange={onChange}
-        /> <input
+        />
+        {/* Campo adicional para confirmar la contraseña */}
+        <input
           className="formItem"
           type="password"
-          placeholder="Confirma Password"
-          value={registerData.contrasena}
-          name="contrasena"
+          placeholder="Confirmar Password"
+          value={registerData.confirmarContrasena}
+          name="confirmarContrasena"
           onChange={onChange}
         />
-        {/**contraseña */}
-        <button className="formItem formButton" id="botonRegistro" type="submit" disabled={isLoading}>
-        {
-            isLoading ? "Cargando..." : "Registrarse" // renderizado condicional
-          }
+        <button
+          className="formItem formButton"
+          id="botonRegistro"
+          type="submit"
+          disabled={isLoading}
+        >
+          {isLoading ? "Cargando..." : "Registrarse"}
         </button>
       </div>
-      
     </form>
   );
 };

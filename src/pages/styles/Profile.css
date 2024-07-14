@@ -1,0 +1,71 @@
+.botonProfile {
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 690px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    grid-gap: 20px;
+  }
+  
+  .botonProfile button {
+    display: grid;
+    background-color: #322B61;
+    border: none;
+    padding: 10px 20px 10px 20px;
+    width: 14vw;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    justify-self: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.476);
+    transition: background-color 0.3s ease;
+  }
+  
+  .botonProfile button:hover {
+    background-color: #2d084f;
+    background-color: #231e44;
+    color: white;
+    font-weight: 600;
+  }
+  
+  .botonProfile button:focus {
+    outline: none;
+    box-shadow: 0 0 3px 1px #3817CC;
+  
+  }
+
+ .profileMainContainer{
+  display: grid;
+  grid-template-rows: 0.1fr 1fr;
+  grid-gap: 20px;
+ }
+
+ .profileImgBackground {
+  background-image: url(/images/bginix.jpeg);
+  height: 120vh; 
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
+  margin-bottom: -120px;
+}
+ 
+.profileImgBackground::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.445); /* Color semi-transparente para oscurecer */
+}
+

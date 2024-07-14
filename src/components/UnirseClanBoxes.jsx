@@ -1,50 +1,43 @@
-import "./styles/boxes.css"
+import { useContext, useState, useEffect } from "react";
+import { clanesContext } from "../context/clanes/clanesContext.js";
+import { usersContext } from "../context/users/usersContext.js";
+import axios from "axios";
+import "./styles/boxes.css";
+import { ClanDisponibleBox } from "./ClanDisponibleBox.jsx";
 /* componente para mostrar cuando se haga click en unirse a un clan y seleccionar la plataforma*/
 export const UnirseClanBoxes = () => {
+  const [selectedButton, setSelectedButton] = useState(null);
+  const [clanesFiltrados, setClanesFiltrados] = useState([]);
+  const { obtenerServicio, isServiceSelected, nombreServicio } =
+    useContext(clanesContext);
+  const { user } = useContext(usersContext);
+
+  const getClanes = async () => {
+    const url = `${import.meta.env.VITE_BACKENDURL}/clan/getAll/${
+      user._id
+    }?plataforma=${isServiceSelected}`;
+    const token = JSON.parse(localStorage.getItem("userToken"));
+    const { data } = await axios.get(url, {
+      headers: {
+        authorization: `Token ${token}`,
+      },
+    });
+    console.log(data);
+    setClanesFiltrados(data.data);
+  };
+  useEffect(() => {
+    obtenerServicio();
+    getClanes();
+  }, [isServiceSelected]);
+
   return (
     <div className="clanDisponibleContainer">
-    
-    <div className="clanDisponibleBox">
-      <div className="clanDisponibleBoxTitle"><span>Clan de %Admin%</span>
-      <div className="clanDisponibleBoxImg">50x50px</div>
-      <span> # años activo</span>
-      <span>VERIFICADO</span></div>
-<div className="clanDisponibleBoxMiddle"> 
-<div className="clanBoxPlataformasIMG"></div>
-<button>UNIRME</button>
-</div>
-<div className="clanBoxCupos"># Cupos Disponibles</div>
-    </div>  <div className="clanDisponibleBox">
-      <div className="clanDisponibleBoxTitle"><span>Clan de %Admin%</span>
-      <div className="clanDisponibleBoxImg">50x50px</div>
-      <span> # años activo</span>
-      <span>VERIFICADO</span></div>
-<div className="clanDisponibleBoxMiddle"> 
-<div className="clanBoxPlataformasIMG"></div>
-<button>UNIRME</button>
-</div>
-<div className="clanBoxCupos"># Cupos Disponibles</div>
-    </div> <div className="clanDisponibleBox">
-      <div className="clanDisponibleBoxTitle"><span>Clan de %Admin%</span>
-      <div className="clanDisponibleBoxImg">50x50px</div>
-      <span> # años activo</span>
-      <span>VERIFICADO</span></div>
-<div className="clanDisponibleBoxMiddle"> 
-<div className="clanBoxPlataformasIMG"></div>
-<button>UNIRME</button>
-</div>
-<div className="clanBoxCupos"># Cupos Disponibles</div>
-    </div> <div className="clanDisponibleBox">
-      <div className="clanDisponibleBoxTitle"><span>Clan de %Admin%</span>
-      <div className="clanDisponibleBoxImg">50x50px</div>
-      <span> # años activo</span>
-      <span>VERIFICADO</span></div>
-<div className="clanDisponibleBoxMiddle"> 
-<div className="clanBoxPlataformasIMG"></div>
-<button>UNIRME</button>
-</div>
-<div className="clanBoxCupos"># Cupos Disponibles</div>
+      <span className="unirseClanTitle">
+        Clanes Disponibles para {nombreServicio}
+      </span>
+      {clanesFiltrados.map((clan) => (
+        <ClanDisponibleBox key={clan._id} clan={clan} />
+      ))}
     </div>
-    </div>
-  )
-}
+  );
+};

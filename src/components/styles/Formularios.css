@@ -1,25 +1,45 @@
 .formItem {
   display: grid;
-  border: solid 2px #7316CC;
+  border: solid 1px #903be0;
   border-radius: 3px;
-  font-family: 'Bebas Neue', sans-serif;
   font-size: 20px;
   text-shadow: 1px 1px 3px rgba(30, 30, 30, 0.572);
-  align-self: top;
-  align-items: center;
-  height: 50px;
-  width: 420px;
   background-color: #f2508e1e;
-  color: white;
-  padding: 10px;
-  justify-self: center;
+  color: white;  padding: 10px;
+  border-radius: 15px;
 }
+
+tool-tip {
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+  user-select: none;
+
+  box-shadow: 0 0 0px #000000;
+  padding: .8rem 1rem;
+  font-size: 14px;
+  top: 45%;
+  width: 300px;
+
+  opacity: 0;
+  transition: opacity .3s ease;
+
+}
+
+:has(> tool-tip) {
+  position: relative;
+}
+
+:has(> tool-tip):hover tool-tip {
+  opacity: 1;
+}
+
+
 
 #botonRegistro {
   background-color: #f2508e1e;
-  ;
   letter-spacing: 1px;
-  font-family: Helvetica;
+  font-family: montserrat;
   font-weight: 1000;
 }
 
@@ -34,24 +54,20 @@ input:focus {
   justify-content: center;
   justify-items: center;
   background-color: #f4dfe700;
-  width: 100vw;
-  height: 100vh;
+
   align-self: center;
   justify-self: center;
   grid-gap: 10px;
 }
 
 .formReg {
+  margin-top: 30px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   height: fit-content;
-  width: 100%;
-  border: solid 3px #7316CC;
   align-self: top;
-  padding: 40px;
   border-radius: 15px;
-  grid-gap: 15px;
   position: relative;
   z-index: 2;
   /* modifica el orden de apilamiento, puede sobreponer o trasponer elementos */
@@ -93,5 +109,16 @@ input:focus {
 }
 
 .formButton {
-  background-color: rgba(215, 7, 194, 0.242) !important;
+  background-color: #322B61 !important;
+  margin: 0 auto;
+  /* Establecer los márgenes laterales automáticamente */
+  display: block;
+}
+
+.formButton:hover {
+  background-color: #231e44 !important;
+  color: white;
+  font-weight: 600;
+
+
 }

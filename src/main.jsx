@@ -5,7 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import { UsersProvider } from "./context/users/UsersProvider.jsx";
 import "tw-elements-react/dist/css/tw-elements-react.min.css";
 import "./main.css";
-import { ClanesProvider } from "./context/clanes/clanesProvider.jsx";
+import { ClanesProvider } from "./context/clanes/ClanesProvider.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

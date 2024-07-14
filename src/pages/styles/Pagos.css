@@ -1,0 +1,64 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    height: 50vh;
+  }
+  
+  .contentpay {
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header, .body, .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .titulo {
+    color: #333;
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .linea {
+    width: 10%;
+    margin: 0 auto;
+    border: none;
+    border-top: 3px solid #333;
+  }
+  
+  .mensaje {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #008000;
+  }
+  
+  .mensajef {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #e5ff00; 
+  }
+
+    
+  .mensajep {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #888100;
+  }
+  .detalles {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .ayuda {
+    font-size: 14px;
+    color: #888;
+  }
+  
