@@ -1,12 +1,12 @@
 .formItem {
   display: grid;
-  border: solid 2px #7316CC;
+  border: solid 1px #903be0;
   border-radius: 3px;
-  font-family: montserrat;
   font-size: 20px;
   text-shadow: 1px 1px 3px rgba(30, 30, 30, 0.572);
   background-color: #f2508e1e;
   color: white;  padding: 10px;
+  border-radius: 15px;
 }
 
 tool-tip {
@@ -54,19 +54,18 @@ input:focus {
   justify-content: center;
   justify-items: center;
   background-color: #f4dfe700;
-  width: 100vw;
-  height: 70vh;
+
   align-self: center;
   justify-self: center;
   grid-gap: 10px;
 }
 
 .formReg {
+  margin-top: 30px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   height: fit-content;
-  border: solid 3px #7316CC;
   align-self: top;
   border-radius: 15px;
   position: relative;

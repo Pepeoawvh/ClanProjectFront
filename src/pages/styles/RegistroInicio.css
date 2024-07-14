@@ -1,17 +1,33 @@
-.regImgBackground{
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr;
-    background-image: url(../../public/images/Registroa.jpeg);
-    background-repeat: no-repeat;
-    background-position:  top;
-    background-size: contain;
-    align-items: center;
+/* Ajustes en RegistroInicio.css */
+.regImgBackground {
+  display: grid;
+  justify-items: center;
+  grid-rows: 1;
+  position: relative; /* Importante para posicionar correctamente el pseudo-elemento */
+}
+
+.regImgBackground::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/images/Registroa.jpeg'); /* Ajusta la ruta según sea necesario */
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  opacity: 0.5; /* Ajusta según necesites */
+  z-index: -1; /* Coloca el fondo detrás del contenido */
+}
+
+.formContainer {
+  z-index: 1; /* Asegura que el contenido esté por encima del fondo */
+  /* Tus estilos existentes para formContainer */
 }
 
 .regBackground{
-    height: 100vh;
-    width: 100vw;
+
     background-color: #02031d;
     z-index: 2; /* modifica el orden de apilamiento, puede sobreponer o trasponer elementos */
     opacity: 0;

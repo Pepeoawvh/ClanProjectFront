@@ -11,6 +11,7 @@ export const FormularioRegistro = () => {
     nombreCompleto: "",
     correo: "",
     contrasena: "",
+    confirmarContrasena: "", // Estado adicional para la confirmación de la contraseña
   };
   const { register } = useContext(usersContext);
   const [registerData, setRegisterData] = useState(initialRegisterData);
@@ -26,15 +27,27 @@ export const FormularioRegistro = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
+    // Verificar si las contraseñas coinciden
+    if (registerData.contrasena !== registerData.confirmarContrasena) {
+      toast("Las contraseñas no coinciden", {
+        duration: 2000,
+        position: "bottom-right",
+        style: { background: "red" },
+      });
+      return;
+    }
     setIsLoading(true);
     try {
-      await register(registerData);
+      await register({
+        nombreCompleto: registerData.nombreCompleto,
+        correo: registerData.correo,
+        contrasena: registerData.contrasena,
+      });
       setIsLoading(false);
       setRegisterData(initialRegisterData);
       toast("Registro exitoso, Bienvenido!", {
         duration: 2000,
         position: "bottom-right",
-        border: "1px solid black",
         style: { background: "black" },
       });
       navegar("/");
@@ -45,7 +58,6 @@ export const FormularioRegistro = () => {
       toast("Ups, algo salió mal, inténtalo nuevamente!", {
         duration: 2000,
         position: "bottom-right",
-        border: "1px solid black",
         style: { background: "black" },
       });
     }
@@ -53,7 +65,7 @@ export const FormularioRegistro = () => {
 
   return (
     <form className="formBanner" onSubmit={onSubmit}>
-      <div className="formReg" id="formReg">
+      <div className="formReg gap-6" id="formReg">
         <input
           className="formItem"
           type="text"
@@ -76,6 +88,15 @@ export const FormularioRegistro = () => {
           placeholder="Password"
           value={registerData.contrasena}
           name="contrasena"
+          onChange={onChange}
+        />
+        {/* Campo adicional para confirmar la contraseña */}
+        <input
+          className="formItem"
+          type="password"
+          placeholder="Confirmar Password"
+          value={registerData.confirmarContrasena}
+          name="confirmarContrasena"
           onChange={onChange}
         />
         <button
