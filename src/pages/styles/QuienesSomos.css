@@ -7,7 +7,7 @@
     background-image: url(/images/bgquees.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     z-index: 1;
     transition-delay: 4s;
 

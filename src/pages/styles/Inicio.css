@@ -40,7 +40,7 @@
     background-image: url(/images/bgini.jpeg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     margin-top: -120px;
 
 }
@@ -82,7 +82,7 @@
     justify-items: center;
     animation: fade-in 1s forwards;
     transition-delay: 1s;
-}
+}co
 
 .iniActions {
     display: grid;
@@ -90,8 +90,8 @@
     justify-items: center;
 }
 
-.iniActions button {
-    width: 271.91px;
+.iniActionsButton {
+    width: auto;
     height: fit-content;
     padding: 15px;
     border-radius: 100px;
@@ -208,16 +208,18 @@
         grid-template-rows: 0.5fr 1fr;
         width: fit-content;
         height: fit-content;
-        margin-top: 50px;
+        margin-top: 20px;
         grid-gap: 10px;
         align-items: center;
         align-self: center;
+        justify-items: center;
+        justify-self: center;
     }
 
     .iniTitle {
         display: grid;
-        grid-template-rows: 0.5fr 0.1fr 0.5fr;
-        height: 200px;
+        grid-template-rows: 0.1fr 0.1fr 0.5fr;
+        height: 170px;
     }
 
     .logoContainer {
@@ -238,9 +240,9 @@
 
     .iniAction {
         display: grid;
-        height: fit-content;
+        height: 200px;
         grid-template-columns: 1fr;
-        grid-template-rows: 0.1fr 0.1fr;
+        grid-template-rows: 0.5fr 1fr;
         width: 100%;
         justify-items: center;
         grid-gap: 10px;
@@ -257,5 +259,11 @@
     .iniAction a {
         display: grid;
         grid-template-rows: 1fr 0.8fr;
+    }
+
+    .iniActions {
+        display: grid;
+        grid-template-rows: 0.4fr;
+        justify-items: center;
     }
 }

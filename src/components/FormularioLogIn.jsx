@@ -48,8 +48,8 @@ export const FormularioLogIn = () => {
   };
 
   return (
-    <form className="formBanner" onSubmit={onSubmit}>
-      <div className="formLogIn" id="formReg">
+    <form className="" onSubmit={onSubmit}>
+      <div className="grid auto-rows-min gap-7"  id="formReg">
         {/**nombreCompleto */}
         <input
           className="formItem"

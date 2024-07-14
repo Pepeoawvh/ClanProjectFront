@@ -5,14 +5,8 @@
   font-family: montserrat;
   font-size: 20px;
   text-shadow: 1px 1px 3px rgba(30, 30, 30, 0.572);
-  align-self: top;
-  align-items: center;
-  height: 50px;
-  width: 420px;
   background-color: #f2508e1e;
-  color: white;
-  padding: 10px;
-  justify-self: center;
+  color: white;  padding: 10px;
 }
 
 tool-tip {
@@ -72,12 +66,9 @@ input:focus {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   height: fit-content;
-  width: 100%;
   border: solid 3px #7316CC;
   align-self: top;
-  padding: 40px;
   border-radius: 15px;
-  grid-gap: 15px;
   position: relative;
   z-index: 2;
   /* modifica el orden de apilamiento, puede sobreponer o trasponer elementos */

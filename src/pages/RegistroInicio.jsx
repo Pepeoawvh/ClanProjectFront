@@ -12,10 +12,10 @@ export const RegistroInicio = () => {
 
   return (
     <>
-      <div className="regBackground ">
-        <div className="regImgBackground circle">
-          <div className="formContainer">
-          <button className="regTitle" onClick={toggleForm}>
+      <div className="">
+        <div className="regImgBackground grid">
+          <div className="formContainer grid">
+          <button className="text-xl" onClick={toggleForm}>
               {showRegister
                 ? "Ya tengo una cuenta, Iniciar Sesión"
                 : "¿Aún no tienes una cuenta? ¡Registrate!"}
